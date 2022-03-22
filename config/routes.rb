@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :posts
+  resources :comments
   devise_for :users
   resources :brands
   root 'static_pages#index'
