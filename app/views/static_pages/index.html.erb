@@ -1,2 +1,147 @@
-<h1>StaticPages#index</h1>
-<p>Find me in app/views/static_pages/index.html.erb</p>
+<header id="showcase">
+    <div class="input-group rounded px-5 py-3">
+    <input type="search" class="form-control rounded" placeholder="Search" aria-label="Search" aria-describedby="search-addon" />
+    </div>
+    <div> </div>
+</header>
+
+<section id="section-1" class="pb-5">
+
+  <div class="container pt-5">
+    <h2>Clique sur une marque pour <br>découvrir son score :</h2>
+
+    <div class="row">
+      <div class="col-sm">
+        <div class="card-body" style="width: 18rem;">
+          <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
+          <div class="card-body">
+            <h3>Nike</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="card-body" style="width: 18rem;">
+          <%= image_tag("adidas.jpg", :alt => "rss feed", :class => "card-img-top") %>
+          <div class="card-body">
+            <h3>Adidas</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-sm">
+        <div class="card-body" style="width: 18rem;">
+          <%= image_tag("Gymshark.png", :alt => "rss feed", :class => "card-img-top") %>
+          <div class="card-body">
+            <h3>Gymshark</h3>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <h2 class="text-center pt-2">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
+  </div>
+    <div class="container py-5">
+        <div class="col-md-12 text-center pb-5">
+            <a id="signup" class="btn btn-primary text-center" href="#">S'inscrire</a>
+        </div>
+    </div>
+</section>
+
+<section id="section-2">
+  <div class="container py-5">
+    <h2 class="pb-5">A propos de Yuka sport :</h2>
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Notre système de notation</h5><br>
+            <p class="card-text">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+            </p><br>
+            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nos engagements</h5><br>
+            <p class="card-text">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+            </p><br>
+            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">L’équipe derrière le projet</h5><br>
+            <p class="card-text">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+            </p><br>
+            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-6">
+        <div class="card">
+          <div class="card-body">
+            <h5 class="card-title">Nos valeurs</h5><br>
+            <p class="card-text">
+            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+            </p><br>
+            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section-3 pt-5">
+  <div class="container pt-5">
+    <h2 class="pb-5">Les derniers acticles de blog</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor fuga odit.</p>
+
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body p-5">
+              <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on 
+                  the card title and make up the bulk 
+                  of the card's content.
+                </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-6 mb-4">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body p-5">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the 
+                card title and make up the bulk of the 
+                card's content.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
