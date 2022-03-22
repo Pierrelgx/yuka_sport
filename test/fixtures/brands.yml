@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  rank: 1
+  environment: 1
+  labour: 1
+  animal: 1
+  quality: 1
+  price: 1
+  description: MyText
+
+two:
+  name: MyString
+  rank: 1
+  environment: 1
+  labour: 1
+  animal: 1
+  quality: 1
+  price: 1
+  description: MyText

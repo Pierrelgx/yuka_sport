@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @brand.name %>
+</p>
+
+<p>
+  <strong>Rank:</strong>
+  <%= @brand.rank %>
+</p>
+
+<p>
+  <strong>Environment:</strong>
+  <%= @brand.environment %>
+</p>
+
+<p>
+  <strong>Labour:</strong>
+  <%= @brand.labour %>
+</p>
+
+<p>
+  <strong>Animal:</strong>
+  <%= @brand.animal %>
+</p>
+
+<p>
+  <strong>Quality:</strong>
+  <%= @brand.quality %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @brand.price %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @brand.description %>
+</p>
+
+<%= link_to 'Edit', edit_brand_path(@brand) %> |
+<%= link_to 'Back', brands_path %>
