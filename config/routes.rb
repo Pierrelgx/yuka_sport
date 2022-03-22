@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :brands
   root 'static_pages#index'
+
+
   get 'static_pages/index'
   get 'static_pages/contact'
   get 'static_pages/a_propos'
