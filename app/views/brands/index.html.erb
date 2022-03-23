@@ -17,23 +17,37 @@
     </tr>
   </thead>
 
-  <tbody>
-    <% @brands.each do |brand| %>
-      <tr>
-        <td><%= brand.name %></td>
-        <td><%= brand.rank %></td>
-        <td><%= brand.environment %></td>
-        <td><%= brand.labour %></td>
-        <td><%= brand.animal %></td>
-        <td><%= brand.quality %></td>
-        <td><%= brand.price %></td>
-        <td><%= brand.description %></td>
-        <td><%= link_to 'Show', brand %></td>
-        <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
-        <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
+    
+
+  <div class="album py-5 bg-light">
+    <div class="container">
+    <div class="row">
+      <tbody>
+        <% @brands.each do |brand| %>
+          <tr>
+            <td><%= brand.name %></td>
+            <td><%= brand.rank %></td>
+            <td><%= brand.environment %></td>
+            <td><%= brand.labour %></td>
+            <td><%= brand.animal %></td>
+            <td><%= brand.quality %></td>
+            <td><%= brand.price %></td>
+            <td><%= brand.description %></td>
+            <td><%= link_to 'Show', brand %></td>
+            <td><%= link_to 'Edit', edit_brand_path(brand) %></td>
+            <td><%= link_to 'Destroy', brand, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          </tr>
+        <% end %>
+      </tbody>
+      </div>
+      </div>
+    </div>
+
+
+
+
+
+    
 </table>
 
 <br>

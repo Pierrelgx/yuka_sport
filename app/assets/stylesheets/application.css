@@ -32,3 +32,29 @@
     height:200px;
     width:100%;
   }
+
+  table {
+    table-layout: fixed;
+    width: 100%;
+    border-collapse: collapse;
+    border: 3px solid rgb(0, 94, 255);
+  }
+
+  td /* Toutes les cellules des tableaux... */
+{
+    border: 5px solid black; /* auront une bordure de 1px */
+}
+  
+th, td {
+  padding: 20px;
+}
+
+table
+{
+    border-collapse: collapse;
+}
+td, th /* Mettre une bordure sur les td ET les th */
+{
+    border: 1px solid black;
+}
+
