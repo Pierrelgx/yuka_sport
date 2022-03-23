@@ -72,3 +72,5 @@ gem 'letter_opener'
 gem 'better_errors'
 
 gem 'devise'
+
+gem 'dotenv-rails'
