@@ -1,7 +1,7 @@
 <div class="container" id="devise">
   <div class="row justify-content-center">
     <div class="col-sm-4 ml-auto mr-auto">
-      <h2 class="text-center">Resend confirmation instructions</h2>
+      <h2 class="text-center">Renvoyer les instructions de confirmation</h2>
 
       <%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
         <%= render partial: 'devise/shared/error_messages', resource: resource %>
