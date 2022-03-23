@@ -1,1 +1,28 @@
-Page profil de l'utilisateur avec bouton pour modifier mot de passe etc
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>La Chatonnerie</title>
+
+</head>
+
+  <main>
+    <h2>Mon profil :</h2>
+    <div class ='align-middle'>
+    <div class="card mt-5 ml-5 mr-5 p-4">
+    <div class="card-body">
+
+    <p class="card-title"><strong>Email: </strong> <%= @user.email %></p>
+
+    <% if current_user.id == @user.id %>
+    <%= link_to "Modifier mon mot de passe", edit_user_registration_path(@user.id) %>
+    <% end %>
+
+    </div>
+    </div>
+    </div>
+
+  <main>
+</html>
