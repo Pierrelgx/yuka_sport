@@ -1,25 +1,25 @@
 <div class="container" id="devise">
   <div class="row justify-content-center p-5">
     <div class="col-lg-4 col-md-6 ml-auto mr-auto shadow-lg p-3 mb-5 bg-body rounded border border-3">
-      <h1 class="text-center">Sign Up</h1>
+      <h1 class="text-center">S'inscrire</h1>
 
       <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
         <%= render partial: 'devise/shared/error_messages', resource: resource %>
 
         <div class="form-group">
-          <%= f.email_field :email, autofocus: false, class: 'form-control', placeholder: "Email Address" %>
+          <%= f.email_field :email, autofocus: false, class: 'form-control', placeholder: "Adresse e-mail" %>
         </div>
 
         <div class="form-group">
-          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Password' %>
+          <%= f.password_field :password, autocomplete: "off", class: 'form-control', placeholder: 'Mot de passe' %>
         </div>
 
         <div class="form-group">
-          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirm Password' %>
+          <%= f.password_field :password_confirmation, autocomplete: "off", class: 'form-control', placeholder: 'Confirmez le mot de passe' %>
         </div>
 
         <div class="form-group">
-          <%= f.submit "Sign up", class: "btn btn-primary btn-block btn-lg" %>
+          <%= f.submit "S'inscrire", class: "btn btn-primary btn-block btn-lg" %>
         </div>
       <% end %>
 
