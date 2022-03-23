@@ -91,5 +91,5 @@ Rails.application.configure do
 
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
-  config.action_mailer.default_url_options = { :host => 'YOURAPPNAME.herokuapp.com' }
+  config.action_mailer.default_url_options = { :host => 'yuka-sport-dev.herokuapp.com' }
 end
