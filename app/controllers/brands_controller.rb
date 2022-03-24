@@ -4,6 +4,7 @@ class BrandsController < ApplicationController
   # GET /brands or /brands.json
   def index
     @brands = Brand.all
+    @brands = search_query_selection()
   end
 
   # GET /brands/1 or /brands/1.json
@@ -66,5 +67,14 @@ class BrandsController < ApplicationController
     # Only allow a list of trusted parameters through.
     def brand_params
       params.require(:brand).permit(:name, :rank, :environment, :labour, :animal, :quality, :price, :description)
+    end
+
+    def search_query_selection
+      case params.present?
+      when params[:query].present?
+        then @brands = @brands.search_by_name(params[:query])
+      else
+      @brands = Brand.all
+      end
     end
 end

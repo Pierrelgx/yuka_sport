@@ -69,6 +69,8 @@ gem 'table_print'
 
 gem 'letter_opener'
 
-gem 'better_errors'
-
 gem 'devise'
+
+gem 'dotenv-rails'
+
+gem 'pg_search', '~> 2.3.0'
