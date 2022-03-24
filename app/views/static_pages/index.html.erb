@@ -1,37 +1,28 @@
 <div class="px-4 py-5 my-5 text-center">
-  <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
-  <h1 class="display-5 fw-bold">Centered hero</h1>
+<img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
+  <h1 class="display-5 fw-bold">Etre sportif et éco-responsable ? C'est possible</h1>
   <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <p class="lead mb-4">Vous souhaitez savoir où sont fabriqués vos vêtements de sport préférés, et l'impact carbonne ? Vous êtes au bon endroit.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+      <button type="button" class="btn btn-outline-primary btn-lg px-4 gap-3">🍀</button>
+    
     </div>
   </div>
 </div>
 
-<form class="row g-3">
-  <div class="col-auto">
-    <label for="inputPassword2" class="visually-hidden">Password</label>
-    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
-  </div>
-  <div class="col-auto">
-    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
-  </div>
-</form>
+
 
 <header id="showcase">
   <div class="container d-flex justify-content-center">
       <div class="input-group input-group-lg">
-
         <div class="container">
         <div class="row height d-flex justify-content-center align-items-center">
           <%= form_tag brands_path, class: "d-flex justify-content-center input-group-lg", method: :get do %>
           <%= text_field_tag :query,
           params[:query],
           placeholder: "Rechercher une marque"
-          %>
-        <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
+          %>&nbsp &nbsp
+        <%= submit_tag "C'est parti ! ", class: "btn btn-primary" %>
           <% end %>
         </div>
         </div>
@@ -42,22 +33,31 @@
   </div>
 </header>
 
-<section id="section-1" class="pb-5">
+<section id="section-1" class="pb-5">  <br>
 
   <div class="container pt-5">
-    <h2>Clique sur une marque pour <br>découvrir son score :</h2>
+    <h2>Clique sur une marque pour <br>découvrir son score :</h2>  <br>  <br>
 
-    <div class="col d-flex justify-content-center">
-        <div class="row">
-          <div class="col-sm">
-            <div class="card-body" style="width: 18rem;">
-              <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
-              <div class="card-body">
+    
+    <br>
+    
+    <div class="album py-5 bg-light">
+      <div class="container">
+
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div class="col">
+           <div class="card shadow-sm">
+               <div class="card-body" style="width: 18rem;">
+                <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
+                <div class="card-body">
                 <h3>Nike</h3>
                 <p class="card-text">Nike est une marque américaine de sportswear fondée en 1972 par Phil Knight. Le siège social de l'entreprise se situe à Beaverton (Oregon) et, en 2014, le chiffre d'affaires du groupe s'élève à 46 milliards de dollars...</p>
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
 
           <div class="col-sm">
             <div class="card-body" style="width: 18rem;">
@@ -110,7 +110,7 @@
             <div class="col-md-12 text-center pb-5">
               <%= link_to new_user_registration_path do %>
               <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
-              <% end %>
+              '<% end %>
             </div>
           </div>
         </div>
