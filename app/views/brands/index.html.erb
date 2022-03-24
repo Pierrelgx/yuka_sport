@@ -1,11 +1,10 @@
 <p id="notice"><%= notice %></p>
 
-<center><h1>Nos marques références</h1></center>
 
 <div class="row py-lg-5">
       <div class="col-lg-6 col-md-8 mx-auto">
       <center><h1 class="fw-light">Les marques présentes</h1>
-        <p class="lead text-muted">Vous trouverez les marques blablabla</p>
+        <p class="lead text-muted">Blablablabla lolilol</p>
         <p> Vous ne trouvez pas la marque que vous recherchez ? Proposez nous votre idée ! 😎 </p>
           <a href="<%= new_brand_path %>" class="btn btn-outline-primary my-2", "nav-link" >Soumettre une marque</a></center>
         </p>        
@@ -13,38 +12,32 @@
       </div>
     </div>
 
-    <div class="container">
-      <% @brands.each do |brand| %>
-        <div class="album py-4 bg-primary">
-          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-              <div class="col">
-              <div class="card mb-4 mt-5 box-shadow">
-              <img class="card-img-top" >
-              <h3 class="display-9"><%= brand.name %></h3>
-              <p>note : <%= brand.rank %></p>
-              <p>environnement : <%= brand.environment %></p>
-              <p>labour : <%= brand.labour %></p>
-              <p>animal : <%= brand.animal %></p>
-              <p>qualité : <%= brand.quality %></p>
-              <p>description: <%= brand.description %></p>
-              <p>prix : <%= brand.price %></p>
-              <div class="d-flex justify-content-between align-items-center">
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Voir plus</button>
-                    <button type="button" class="btn btn-sm btn-outline-secondary">Editer</button>
+       
+<br>
+
+<div class="album py-5 bg-light">
+<div class="container">
+ <div class="row">
+<% @brands.each do |brand| %>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x100%]" style="height: 100%; width: 100%; display: block;" src="https://cdn.pixabay.com/photo/2019/05/08/21/21/cat-4189697_1280.jpg" data-holder-rendered="true">
+                <div class="card-body">
+                <h3 class="display-7"><%= brand.name %></h3>
+                <p>note : <%= brand.rank %></p>
+                <p>environnement : <%= brand.environment %></p>
+                <p>labour : <%= brand.labour %></p>
+                <p>animal : <%= brand.animal %></p>
+                <p>qualité : <%= brand.quality %></p>
+                <p>description: <%= brand.description %></p>
+                <p>prix : <%= brand.price %></p>                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-
-      <% end %>
-      
-   
-       
-<br>
-
-
+<% end %>
 
 
 
