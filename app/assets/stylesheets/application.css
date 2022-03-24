@@ -13,6 +13,9 @@
  *= require_tree .
  *= require_self
  */
+ #navbarSupportedContent1 ul{
+    margin: 0;
+  }
  #signup {
      width: 117.23px;
  }
