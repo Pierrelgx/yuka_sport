@@ -9,6 +9,7 @@ class BrandsController < ApplicationController
 
   # GET /brands/1 or /brands/1.json
   def show
+    @brands = Brand.find(params[:id])
   end
 
   # GET /brands/new
