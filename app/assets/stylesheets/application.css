@@ -1,4 +1,4 @@
-/*
+/* /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -13,7 +13,7 @@
  *= require_tree .
  *= require_self
  */
- #signup {
+ /* #signup {
      width: 117.23px;
  }
  #showcase{
@@ -33,19 +33,18 @@
     width:100%;
   }
 
-seedok
   table {
     table-layout: fixed;
     width: 100%;
     border-collapse: collapse;
     border: 3px solid rgb(0, 94, 255);
-  }
-
-  td /* Toutes les cellules des tableaux... */
+  } */
+/*
+  td
 {
-    border: 5px solid black; /* auront une bordure de 1px */
+    border: 5px solid black;
 }
-  
+
 th, td {
   padding: 20px;
 }
@@ -54,7 +53,7 @@ table
 {
     border-collapse: collapse;
 }
-td, th /* Mettre une bordure sur les td ET les th */
+td, th
 {
     border: 1px solid black;
 }
@@ -80,7 +79,7 @@ td, th /* Mettre une bordure sur les td ET les th */
 
   .input-group-append {
       margin-left: -2px !important
-      
+
   }
 
   .form-control:focus {
@@ -94,5 +93,4 @@ td, th /* Mettre une bordure sur les td ET les th */
   .form-control {
       border-right: 0 !important;
       border-left: 0 !important
-  }
-main
+  }  */
