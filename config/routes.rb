@@ -4,7 +4,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :brands
   resources :user
-
+  resources :charges
+  
   root 'static_pages#index'
 
 
