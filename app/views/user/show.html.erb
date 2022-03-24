@@ -1,12 +1,11 @@
-
-  <h2>Mon profil :</h2>
-    <div class ='align-middle'>
-      <div class="card mt-5 ml-5 mr-5 p-4">
-        <div class="card-body">
-          <p class="card-title"><strong>Email: </strong> <%= @user.email %></p>
+<h2>Mon profil :</h2>
+  <div class ='align-middle'>
+    <div class="card mt-5 ml-5 mr-5 p-4">
+      <div class="card-body">
+        <p class="card-title"><strong>Email: </strong> <%= @user.email %></p>
           <% if current_user.id == @user.id %>
           <%= link_to "Modifier mon mot de passe", edit_user_registration_path(@user.id) %>
           <% end %>
-        </div>
       </div>
     </div>
+  </div>
