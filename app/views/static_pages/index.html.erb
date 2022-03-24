@@ -10,20 +10,28 @@
   </div>
 </div>
 
+<form class="row g-3">
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+  </div>
+</form>
+
 <header id="showcase">
   <div class="container d-flex justify-content-center">
       <div class="input-group input-group-lg">
 
         <div class="container">
         <div class="row height d-flex justify-content-center align-items-center">
-          <%= form_tag brands_path, method: :get do %>
+          <%= form_tag brands_path, class: "d-flex justify-content-center input-group-lg", method: :get do %>
           <%= text_field_tag :query,
           params[:query],
-          class: "form-control mt-4",
-          placeholder: "Rechercher une marque",
-          style: "inline-block"
+          placeholder: "Rechercher une marque"
           %>
-        <%= submit_tag "C'est parti !", class: "btn btn-primary", style: "inline-block" %>
+        <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
           <% end %>
         </div>
         </div>
