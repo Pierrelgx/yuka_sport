@@ -8,7 +8,22 @@
           <p class="lead text-muted">Retrouvez vos marques préférées ci-dessous afin de découvrir leur note selon différents critères : la qualité et le prix de leurs produits, les aspects environnementaux, sociaux ou encore humains des conditions de production.</p>
 
           <p> Vous ne trouvez pas la marque que vous recherchez ? Proposez nous votre idée ! 😎 </p>
-            <a href="<%= new_brand_path %>" class="btn btn-outline-primary my-2">Soumettre une marque</a>
+
+            <% if user_signed_in? %>
+                <div class="container">
+                  <a href="<%= new_brand_path %>" class="btn btn-outline-primary my-2">Soumettre une marque</a>
+                </div>
+
+            <% else %>
+                <div class="container">
+                    <div class="col-md-12 text-center pb-5">
+                      <%= link_to new_user_registration_path do %>
+                      <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
+                      <% end %>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
           </p>
   </div>
 </div>
