@@ -33,7 +33,7 @@
     width:100%;
   }
 
-  
+
   .stats-row {
     margin-top: 65px;
   }
@@ -44,14 +44,14 @@
     height: 160px;
     font-family: "Raleway", Helvetica, Arial, sans-serif;
     font-weight: 500;
-    color: #666;
+    color: #000000;
     border: 6px solid #199EB8;
     border-radius: 50%;
     padding: 55px 25px 0 25px;
     position: relative;
   }
   .stats-col .circle .stats-no {
-    color: #fff;
+    color: #FFF;
     width: 70px;
     height: 70px;
     line-height: 70px;
@@ -65,3 +65,31 @@
     font-weight: 700;
   }
   
+  .skills .progress {
+    height: 60px;
+    display: block;
+    background: none;
+    border-radius: 0;
+  }
+  .skills .progress .skill {
+    padding: 10px 0;
+    margin: 0;
+    text-transform: uppercase;
+    display: block;
+    font-weight: 600;
+    font-family: "Poppins", sans-serif;
+    color: #556270;
+  }
+  .skills .progress .skill .val {
+    float: right;
+    font-style: normal;
+  }
+  .skills .progress-bar-wrap {
+    background: #edeff1;
+  }
+  .skills .progress-bar {
+    width: 1px;
+    height: 10px;
+    transition: 0.9s;
+    background-color: #6b7b8d;
+  }
