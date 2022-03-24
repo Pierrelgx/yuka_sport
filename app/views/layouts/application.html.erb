@@ -12,23 +12,26 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand px-2" href="#">LES ZOZOS</a>
+    <a class="navbar-brand px-2" href="<%= static_pages_index_path %>">LES ZOZOS</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse px-5" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item active">
-          <a class="nav-link text-primary" href="#">Marques</a>
+          <a class="nav-link text-primary" href="<%= brands_path %>">Marques</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-primary" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-primary" href="#">A propos de nous</a>
+          <a class="nav-link text-primary" href="<%= static_pages_a_propos_path %> ">A propos de nous</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-primary" href="#">Contact</a>
+          <a class="nav-link text-primary" href="<%= static_pages_contact_path %>">Contact</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="#">Faire un don ♥️</a>
         </li>
       </ul>
     </div>
