@@ -1,12 +1,12 @@
 <header id="showcase">
   <div class="container d-flex justify-content-center">
       <div class="input-group col-sm-7 input-group-lg">
-        <div class="input-group-prepend"> 
+        <div class="input-group-prepend">
           <span class="input-group-text glass"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/344/external-magnifying-glass-interface-kiranshastry-solid-kiranshastry.png" width="48" height="48">
-          </span> 
-        </div> 
+          </span>
+        </div>
         <input type="text" class="form-control" placeholder="Rechercher une marque">
-          <div class="input-group-append"> 
+          <div class="input-group-append">
             <span class="input-group-text btn-go"><button class="btn btn-primary" type="button" width="48" height="48">C'est parti !</button></span>
           </div>
       </div>
@@ -18,44 +18,76 @@
   <div class="container pt-5">
     <h2>Clique sur une marque pour <br>découvrir son score :</h2>
 
-    <div class="row">
-      <div class="col-sm">
-        <div class="card-body" style="width: 18rem;">
-          <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
-          <div class="card-body">
-            <h3>Nike</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+    <div class="col d-flex justify-content-center">
+        <div class="row">
+          <div class="col-sm">
+            <div class="card-body" style="width: 18rem;">
+              <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
+              <div class="card-body">
+                <h3>Nike</h3>
+                <p class="card-text">Nike est une marque américaine de sportswear fondée en 1972 par Phil Knight. Le siège social de l'entreprise se situe à Beaverton (Oregon) et, en 2014, le chiffre d'affaires du groupe s'élève à 46 milliards de dollars...</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="col-sm">
-        <div class="card-body" style="width: 18rem;">
-          <%= image_tag("adidas.jpg", :alt => "rss feed", :class => "card-img-top") %>
-          <div class="card-body">
-            <h3>Adidas</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="col-sm">
+            <div class="card-body" style="width: 18rem;">
+              <%= image_tag("adidas.jpg", :alt => "rss feed", :class => "card-img-top") %>
+              <div class="card-body">
+                <h3>Adidas</h3>
+                <p class="card-text">Les vêtements de sport d’Adidas pour hommes comptent parmi les meilleurs sur le marché. Ils ont développé des vêtements de sport qui épousent parfaitement les formes....</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="col-sm">
-        <div class="card-body" style="width: 18rem;">
-          <%= image_tag("Gymshark.png", :alt => "rss feed", :class => "card-img-top") %>
-          <div class="card-body">
-            <h3>Gymshark</h3>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          <div class="col-sm">
+            <div class="card-body" style="width: 18rem;">
+              <%= image_tag("Gymshark.png", :alt => "rss feed", :class => "card-img-top") %>
+              <div class="card-body">
+                <h3>Gymshark</h3>
+                <p class="card-text">La marque a été créée en 2010 par Emily Weiss, une ancienne gymnaste, en collaboration avec Marie Forleo, coach fitness lifestyle et auteure à succès. Fabletics est basé...</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <h2 class="text-center pt-2">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
   </div>
-    <div class="container py-5">
-        <div class="col-md-12 text-center pb-5">
-            <a id="signup" class="btn btn-primary text-center" href="#">S'inscrire</a>
+
+  <ul>
+    <% if user_signed_in? %>
+
+      <div class="card mb-4 box-shadow">
+        <div class="container">
+          <br>
+          <h2 class="text-center pt-2">Tu ne trouves pas ta marque préférée ? <br> Clique-ci dessous pour qu'elle soit ajoutée sur le site !</h2>
+          <div class="container py-5">
+            <div class="col-md-12 text-center pb-5">
+              <%= link_to new_user_registration_path do %>
+              <div class="btn btn-primary text-center" style="width:200px" >Soumettre une marque</div>
+              <% end %>
+            </div>
+          </div>
         </div>
-    </div>
+      </div>
+
+
+    <% else %>
+      <div class="card mb-4 box-shadow">
+        <div class="container">
+          <br>
+          <h2 class="text-center pt-2">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
+          <div class="container py-5">
+            <div class="col-md-12 text-center pb-5">
+              <%= link_to new_user_registration_path do %>
+              <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </ul>
 </section>
 
 <section id="section-2">
@@ -69,7 +101,9 @@
             <p class="card-text">
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
             </p><br>
-            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+            <%= link_to static_pages_a_propos_path do %>
+            <div class="btn btn-outline-primary">En savoir plus</div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -80,7 +114,10 @@
             <p class="card-text">
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
             </p><br>
-            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+            <%= link_to static_pages_a_propos_path do %>
+            <div class="btn btn-outline-primary">En savoir plus</div>
+            <% end %>
+
           </div>
         </div>
       </div>
@@ -96,7 +133,9 @@
             <p class="card-text">
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
             </p><br>
-            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+            <%= link_to static_pages_a_propos_path do %>
+            <div class="btn btn-outline-primary">En savoir plus</div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -107,7 +146,9 @@
             <p class="card-text">
             Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
             </p><br>
-            <a href="#" class="btn btn-outline-primary">En savoir plus</a>
+            <%= link_to static_pages_a_propos_path do %>
+            <div class="btn btn-outline-primary">En savoir plus</div>
+            <% end %>
           </div>
         </div>
       </div>
@@ -128,8 +169,8 @@
             <div class="card-body p-5">
               <h5 class="card-title">Card title</h5>
                 <p class="card-text">
-                  Some quick example text to build on 
-                  the card title and make up the bulk 
+                  Some quick example text to build on
+                  the card title and make up the bulk
                   of the card's content.
                 </p>
             </div>
@@ -142,8 +183,8 @@
             <div class="card-body p-5">
               <h5 class="card-title">Card title</h5>
               <p class="card-text">
-                Some quick example text to build on the 
-                card title and make up the bulk of the 
+                Some quick example text to build on the
+                card title and make up the bulk of the
                 card's content.
               </p>
             </div>
