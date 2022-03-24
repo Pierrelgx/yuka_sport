@@ -1,26 +1,39 @@
+<div class="px-4 py-5 my-5 text-center">
+  <img class="d-block mx-auto mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="" width="72" height="57">
+  <h1 class="display-5 fw-bold">Centered hero</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive prebuilt components, and powerful JavaScript plugins.</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <button type="button" class="btn btn-primary btn-lg px-4 gap-3">Primary button</button>
+      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
+    </div>
+  </div>
+</div>
+
+<form class="row g-3">
+  <div class="col-auto">
+    <label for="inputPassword2" class="visually-hidden">Password</label>
+    <input type="password" class="form-control" id="inputPassword2" placeholder="Password">
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+  </div>
+</form>
+
 <header id="showcase">
   <div class="container d-flex justify-content-center">
-      <div class="input-group col-sm-7 input-group-lg">
-        <div class="input-group-prepend">
-          <span class="input-group-text glass"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/344/external-magnifying-glass-interface-kiranshastry-solid-kiranshastry.png" width="48" height="48">
-          </span>
-        </div>
-        <%# <input type="text" class="form-control" placeholder="Rechercher une marque">
-          <div class="input-group-append">
-            <span class="input-group-text btn-go"><button class="btn btn-primary" type="button" width="48" height="48">C'est parti !</button></span>
-          </div> %>
+      <div class="input-group input-group-lg">
 
-
-        <div class="row">
-          <%= form_tag brands_path, method: :get do %>
+        <div class="container">
+        <div class="row height d-flex justify-content-center align-items-center">
+          <%= form_tag brands_path, class: "d-flex justify-content-center input-group-lg", method: :get do %>
           <%= text_field_tag :query,
           params[:query],
-          class: "form-control mt-4",
-          placeholder: "Rechercher une marque",
-          style: "inline-block"
+          placeholder: "Rechercher une marque"
           %>
-        <%= submit_tag "C'est parti !", class: "btn btn-primary", style: "inline-block" %>
+        <%= submit_tag "C'est parti !", class: "btn btn-primary" %>
           <% end %>
+        </div>
         </div>
 
       </div>
