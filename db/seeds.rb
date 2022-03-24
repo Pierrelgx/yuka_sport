@@ -44,9 +44,40 @@ Brand.create!(
 
 Brand.create!(
   name: "Asics",
-  description: "Asics est une marque de sport
+  description: "Asics est une marque de sport qui a été créée en 1949 par Kihachiro Onitsuka. Le but de la marque était de créer des chaussures de sport qui prennent en compte la flexibilité et le confort. Le nom d’Asics vient du mot japonais « Aï » qui signifie lui-même « souplesse »",
+  price: rand(0..10),
+  rank: rand(0..10),
+  quality: rand(0..10),
+  animal: rand(0..10),
+  labour: rand(0..10),
+  environment: rand(0..10)
+);
 
-  qui a été créée en 1949 par Kihachiro Onitsuka. Le but de la marque était de créer des chaussures de sport qui prennent en compte la flexibilité et le confort. Le nom d’Asics vient du mot japonais « Aï » qui signifie lui-même « souplesse »",
+Brand.create!(
+  name: "Puma",
+  description: "Puma est une marque d'origine allemande fondée en 1948. Présente dans plus de 120 pays, Puma est le troisième équipementier sportif dans le monde derrière Nike et Adidas.",
+  price: rand(0..10),
+  rank: rand(0..10),
+  quality: rand(0..10),
+  animal: rand(0..10),
+  labour: rand(0..10),
+  environment: rand(0..10)
+);
+
+Brand.create!(
+  name: "Lulu Lemon",
+  description: "La marque a vu le jour en 1998 au Canada, à Vancouver. La marque est spécialisée à la pratique du yoga. 60 % de ses produits provenaient en 2013 de cinq sous-traitants. 54 % des produits étaient fabriqués en Asie du Sud/Sud-Est, 34 % en Chine et 3 % d'Amérique du Nord.",
+  price: rand(0..10),
+  rank: rand(0..10),
+  quality: rand(0..10),
+  animal: rand(0..10),
+  labour: rand(0..10),
+  environment: rand(0..10)
+);
+
+Brand.create!(
+  name: "Kalenji",
+  description: "Kalenji est une marque française créée en 2004 par le groupe Decathlon. La marque vend des produits spécialisés pour la course à pied, le trail ou encore l'athlétisme.",
   price: rand(0..10),
   rank: rand(0..10),
   quality: rand(0..10),
