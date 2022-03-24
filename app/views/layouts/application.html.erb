@@ -12,7 +12,7 @@
 
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand px-2" href="<%= static_pages_index_path %>">LES ZOZOS</a>
+    <a class="navbar-brand px-2" href="<%= static_pages_index_path %>">FAIR ATHLETE</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -25,7 +25,7 @@
           <a class="nav-link text-primary" href="#">Blog</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-primary" href="<%= static_pages_a_propos_path %> ">A propos de nous</a>
+          <a class="nav-link text-primary" href="<%= static_pages_a_propos_path %> ">A propos</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-primary" href="<%= static_pages_contact_path %>">Contact</a>
@@ -52,31 +52,25 @@
             <% else %>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
               <li class="nav-item"><a href="<%=new_user_session_path%>" class="btn btn-outline-primary">Se connecter</a></li>
-              <li class="nav-item px-3"><a href="<%=new_user_registration_path%>" class="btn btn-primary", id="signup" >S inscrire</a></li>
+              <li class="nav-item px-3"><a href="<%=new_user_registration_path%>" class="btn btn-primary", id="signup" >S'inscrire</a></li>
             </ul>
             <% end %>
           </ul>
   </nav>
 
   <%= yield %>
-      <footer class="footer font-small">
-        <div class="container-fluid p-5">
-          <div class="row">
-            <div class="col">
-              Photo
+      <footer class="pt-5 my-5 text-muted border-top">
+        <div class="container">
+              <p> <a href="<%= static_pages_a_propos_path %>">En savoir plus sur Fair Athlete</p></a>
+              <p> <a href="<%= static_pages_contact_path %>">Nous contacter</p></a>
+
             </div>
-            <div class="col">
-              <div class="row">
-                <div class="col"><p>Mobile app</p></div>
-                <div class="col"><p>Community</p></div>
-                <div class="col"><p>Company</p></div>
-              </div>
-            </div>
-            <div class="col text-end">
-              © 2022, Made is love, Team THP
+            <div class="footer-copyright text-center py-3">
+              <p>© 2022, Made with love, THP</p>
+              <p>Niall, Pierre, Aurélien, Alex & Bénédicte</p>
             </div>
           </div>
         </div>
       </footer>
 </body>
-</html> 
+</html>
