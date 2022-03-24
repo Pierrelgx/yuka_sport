@@ -5,10 +5,26 @@
           <span class="input-group-text glass"><img src="https://img.icons8.com/external-kiranshastry-solid-kiranshastry/344/external-magnifying-glass-interface-kiranshastry-solid-kiranshastry.png" width="48" height="48">
           </span>
         </div>
-        <input type="text" class="form-control" placeholder="Rechercher une marque">
+        <%# <input type="text" class="form-control" placeholder="Rechercher une marque">
           <div class="input-group-append">
             <span class="input-group-text btn-go"><button class="btn btn-primary" type="button" width="48" height="48">C'est parti !</button></span>
-          </div>
+          </div> %>
+
+
+        <div class="row">
+          <%= form_tag brands_path, method: :get do %>
+          <%= text_field_tag :query,
+          params[:query],
+          class: "form-control mt-4",
+          placeholder: "Rechercher une marque",
+          style: "inline-block"
+          %>
+        <%= submit_tag "C'est parti !", class: "btn btn-primary", style: "inline-block" %>
+          <% end %>
+        </div>
+
+      </div>
+
       </div>
   </div>
 </header>
