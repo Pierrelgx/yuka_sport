@@ -13,3 +13,5 @@ require 'faker'
         environment: Faker::Cannabis.type
     );
 end
+
+    
