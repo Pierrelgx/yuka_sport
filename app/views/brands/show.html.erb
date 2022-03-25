@@ -1,44 +1,65 @@
+
+<div class="container p-5 my-5 border">
+
+  <h1 class="fw-light"><%= @brand.name %></h1>
+  <br>
+
+  <div class ="contrainer">
+    <p><h3 class="fw-light">Note générale :
+    <%= @brand.rank %></h3></p>
+
+    <% if @brand.rank <=3 %>
+        <div class="progress">
+          <div class="progress-bar bg-danger" style="width:20%"></div>
+        </div>
+      <% elsif @brand.rank <=7 && @brand.rank >3 %>
+        <div class="progress">
+          <div class="progress-bar bg-warning" style="width:50%"></div>
+        </div>
+      <% else %>
+        <div class="progress">
+          <div class="progress-bar bg-success" style="width:90%"></div>
+        </div>
+    <% end %>
+  </div>
+  <br>
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @brand.name %>
-</p>
+<table class="table">
 
-<p>
-  <strong>Rank:</strong>
-  <%= @brand.rank %>
-</p>
+<tr>
+  <td><strong>Description de la marque :</strong></td>
+  <td><%= @brand.description %></td>
+</tr>
 
-<p>
-  <strong>Environment:</strong>
-  <%= @brand.environment %>
-</p>
+<tr>
+  <td><strong>Environnement :</strong></td>
+  <td><%= @brand.environment %></td>
+</tr>
 
-<p>
-  <strong>Labour:</strong>
-  <%= @brand.labour %>
-</p>
+<tr>
+  <td><strong>Conditions de travail :</strong></td>
+  <td><%= @brand.labour %></td>
+</tr>
 
-<p>
-  <strong>Animal:</strong>
-  <%= @brand.animal %>
-</p>
+<tr>
+  <td><strong>Conditions animales :</strong></td>
+  <td><%= @brand.animal %></td>
+</tr>
 
-<p>
-  <strong>Quality:</strong>
-  <%= @brand.quality %>
-</p>
+<tr>
+  <td><strong>Qualité :</strong></td>
+  <td><%= @brand.quality %></td>
+</tr>
 
-<p>
-  <strong>Price:</strong>
-  <%= @brand.price %>
-</p>
+<tr>
+  <td><strong>Prix :</strong></td>
+  <td><%= @brand.price %></td>
+</tr>
 
-<p>
-  <strong>Description:</strong>
-  <%= @brand.description %>
-</p>
+</table>
 
-<%= link_to 'Edit', edit_brand_path(@brand) %> |
-<%= link_to 'Back', brands_path %>
+<%= link_to 'Modifier', edit_brand_path(@brand) %> |
+<%= link_to 'Retour à la liste des marques', brands_path %>
+
+</div>
