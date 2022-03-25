@@ -10,15 +10,15 @@
 
   <% if @brand.rank <=33 %>
     <div class="progress">
-      <div class="progress-bar bg-danger" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="100"></div>
+      <div class="progress-bar bg-danger" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="10"></div>
     </div>
   <% elsif @brand.rank <=66 && @brand.rank >33 %>
     <div class="progress">
-      <div class="progress-bar bg-warning" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0" aria-valuemax="100"></div>
+      <div class="progress-bar bg-warning" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0" aria-valuemax="10"></div>
     </div>
   <% else %>
     <div class="progress">
-      <div class="progress-bar bg-success" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="100"></div>
+      <div class="progress-bar bg-success" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="10"></div>
     </div>
   <% end %>
 </div>
