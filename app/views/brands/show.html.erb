@@ -1,60 +1,60 @@
 
 <div class="container p-5 my-5 border">
 
-  <h1 class="fw-light"><%= @brand.name %></h1>
-  <br>
+<h1 class="fw-light"><%= @brand.name %></h1>
+<br>
 
-  <div class ="contrainer">
-    <p><h3 class="fw-light">Note générale :
-    <%= @brand.rank %></h3></p>
+<div class ="contrainer">
+  <p><h3 class="fw-light">Note générale :
+  <%= @brand.rank %></h3></p>
 
-    <% if @brand.rank <=3 %>
-        <div class="progress">
-          <div class="progress-bar bg-danger" style="width:20%"></div>
-        </div>
-      <% elsif @brand.rank <=7 && @brand.rank >3 %>
-        <div class="progress">
-          <div class="progress-bar bg-warning" style="width:50%"></div>
-        </div>
-      <% else %>
-        <div class="progress">
-          <div class="progress-bar bg-success" style="width:90%"></div>
-        </div>
-    <% end %>
-  </div>
-  <br>
+  <% if @brand.rank <=33 %>
+    <div class="progress">
+      <div class="progress-bar bg-danger" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="100"></div>
+    </div>
+  <% elsif @brand.rank <=66 && @brand.rank >33 %>
+    <div class="progress">
+      <div class="progress-bar bg-warning" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0" aria-valuemax="100"></div>
+    </div>
+  <% else %>
+    <div class="progress">
+      <div class="progress-bar bg-success" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="100"></div>
+    </div>
+  <% end %>
+</div>
+<br>
 <p id="notice"><%= notice %></p>
 
 <table class="table">
 
 <tr>
-  <td><strong>Description de la marque :</strong></td>
-  <td><%= @brand.description %></td>
+<td><strong>Description de la marque :</strong></td>
+<td><%= @brand.description %></td>
 </tr>
 
 <tr>
-  <td><strong>Environnement :</strong></td>
-  <td><%= @brand.environment %></td>
+<td><strong>Environnement :</strong></td>
+<td><%= @brand.environment %></td>
 </tr>
 
 <tr>
-  <td><strong>Conditions de travail :</strong></td>
-  <td><%= @brand.labour %></td>
+<td><strong>Conditions de travail :</strong></td>
+<td><%= @brand.labour %></td>
 </tr>
 
 <tr>
-  <td><strong>Conditions animales :</strong></td>
-  <td><%= @brand.animal %></td>
+<td><strong>Conditions animales :</strong></td>
+<td><%= @brand.animal %></td>
 </tr>
 
 <tr>
-  <td><strong>Qualité :</strong></td>
-  <td><%= @brand.quality %></td>
+<td><strong>Qualité :</strong></td>
+<td><%= @brand.quality %></td>
 </tr>
 
 <tr>
-  <td><strong>Prix :</strong></td>
-  <td><%= @brand.price %></td>
+<td><strong>Prix :</strong></td>
+<td><%= @brand.price %></td>
 </tr>
 
 </table>
