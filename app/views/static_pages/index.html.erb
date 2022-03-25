@@ -1,107 +1,62 @@
 <div class="header">
-  <div class="px-4 py-5 text-center" 
+  <div class="px-4 py-5 text-center"
 style="
   background-image: url('https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
-  height: 50vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+  height: 90vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
 <img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
-  <h1 class="display-5 fw-bold">Etre sportif et éco-responsable ? C'est possible</h1>
+  <h1 class="display-5 fw-bold text-white">Etre sportif et éco-responsable ? C'est possible</h1>
   <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Vous souhaitez savoir où sont fabriqués vos vêtements de sport préférés, et l'impact carbonne ? Vous êtes au bon endroit.</p>
+    <p class="lead mb-4 text-white">Vous souhaitez savoir où sont fabriqués vos vêtements de sport préférés, et l'impact carbonne ? Vous êtes au bon endroit.</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       <div class="container d-flex justify-content-center">
       <div class="input-group input-group-lg">
         <div class="container">
+        <br>
         <div class="row g-3">
           <%= form_tag brands_path, class: "d-flex input-group-lg", method: :get do %>
-          
+
             <%= text_field_tag :query,
             params[:query],
             placeholder: "Rechercher une marque", class: "px-2 me-3 form-control"  %>
-          
-          
-          <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control" %>
-          
+
+
+          <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control", :style => "width:170px;" %>
+
           <% end %>
-
         </div>
         </div>
       </div>
-      </div>  
+      </div>
     </div>
 </div>
 </div>
-
-<div class="container pt-5">
-  <h2>Clique sur une marque pour <br>découvrir son score :</h2>  <br>  <br>
-  <div class="container px-4 py-5" id="featured-3">
-  <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
-    <div class="feature col">
-        <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
-      <h2>Nike</h2>
-      <a href="#" class="icon-link">
-        Call to action
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-      </a>
+<br>
+<div class="container">
+<div class="card-group">
+  <div class="card">
+    <%= image_tag("nike2.png")%>
+    <div class="card-body">
+      <h5 class="card-title">Nike</h5>
+      <p class="card-text">Nike est une marque américaine de sportswear fondée en 1972 par Phil Knight. Le siège social de l'entreprise se situe à Beaverton (Oregon) et, en 2014, le chiffre d'affaires du groupe s'élève à 46 milliards de dollars...</p>
     </div>
-    <div class="feature col">
-      <h2>Adidas</h2>
-      <p class="card-text">Les vêtements de sport d’Adidas pour hommes comptent parmi les meilleurs sur le marché. Ils ont développé des vêtements de sport qui épousent parfaitement les formes....</p>
-      <a href="#" class="icon-link">
-        Call to action
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-      </a>
+  </div>
+  <div class="card">
+    <%= image_tag("Adidas-Logo2.png")%>
+    <div class="card-body">
+      <h5 class="card-title">Adidas</h5>
+      <p class="card-text">Les vêtements de sport d’Adidas pour hommes comptent parmi les meilleurs sur le marché. Ils ont développé des vêtements de sport qui épousent parfaitement les formes...</p>
     </div>
-    <div class="feature col">
-      <%= image_tag("Gymshark.png", :alt => "rss feed", :class => "card-img-top") %>
-      <h2>Gymshark</h2>
+  </div>
+  <div class="card">
+    <%=image_tag("Gymshark.png")%>
+    <div class="card-body">
+      <h5 class="card-title">Gymshark</h5>
       <p class="card-text">La marque a été créée en 2010 par Emily Weiss, une ancienne gymnaste, en collaboration avec Marie Forleo, coach fitness lifestyle et auteure à succès. Fabletics est basé...</p>
-      <a href="#" class="icon-link">
-        Call to action
-        <svg class="bi" width="1em" height="1em"><use xlink:href="#chevron-right"></use></svg>
-      </a>
     </div>
   </div>
 </div>
-<div class="album py-5 bg-light">
-    <div class="container">
-
-      <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-        <div class="col">
-          <div class="card shadow-sm">
-              <div class="card-body" style="width: 18rem;">
-              <%= image_tag("nike.jpg", :alt => "rss feed", :class => "card-img-top") %>
-              <div class="card-body">
-              <h3>Nike</h3>
-              <p class="card-text">Nike est une marque américaine de sportswear fondée en 1972 par Phil Knight. Le siège social de l'entreprise se situe à Beaverton (Oregon) et, en 2014, le chiffre d'affaires du groupe s'élève à 46 milliards de dollars...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-
-        <div class="col-sm">
-          <div class="card-body" style="width: 18rem;">
-            <%= image_tag("adidas.jpg", :alt => "rss feed", :class => "card-img-top") %>
-            <div class="card-body">
-              <h3>Adidas</h3>
-              <p class="card-text">Les vêtements de sport d’Adidas pour hommes comptent parmi les meilleurs sur le marché. Ils ont développé des vêtements de sport qui épousent parfaitement les formes....</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-sm">
-          <div class="card-body" style="width: 18rem;">
-            <%= image_tag("Gymshark.png", :alt => "rss feed", :class => "card-img-top") %>
-            <div class="card-body">
-              <h3>Gymshark</h3>
-              <p class="card-text">La marque a été créée en 2010 par Emily Weiss, une ancienne gymnaste, en collaboration avec Marie Forleo, coach fitness lifestyle et auteure à succès. Fabletics est basé...</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
+</div>
+<br>
     <div class="container">
     <% if user_signed_in? %>
 
@@ -113,7 +68,7 @@ style="
         <div class="container py-5">
           <div class="col text-center pb-5">
             <%= link_to new_user_registration_path do %>
-            <div class="btn btn-primary text-center" style="width:200px" >Soumettre une marque</div>
+            <div class="btn btn-primary text-center" style="width:250px" >Soumettre une marque</div>
             <% end %>
           </div>
         </div>
@@ -141,14 +96,15 @@ style="
 
 <section id="section-2">
 <div class="container py-5">
-  <h2 class="pb-5">A propos de Yuka sport :</h2>
+  <h2 class="pb-5">A propos de Fair Athlete :</h2>
   <div class="row">
     <div class="col-sm-6">
       <div class="card">
         <div class="card-body">
           <h5 class="card-title">Notre système de notation</h5><br>
           <p class="card-text">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          Nous nous basons sur 5 facteurs afin d’établir le score des marques référencées sur notre plateforme.
+          Les 5 critères sont basés sur le rapport qualité/ et prix, la main d’œuvre au moment de la production, la présence de matière animale dans les tissus et matériaux et l’impact environnemental des marques.  
           </p><br>
           <%= link_to static_pages_a_propos_path do %>
           <div class="btn btn-outline-primary">En savoir plus</div>
@@ -161,7 +117,9 @@ style="
         <div class="card-body">
           <h5 class="card-title">Nos engagements</h5><br>
           <p class="card-text">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          Cette plateforme a pour but de renseigner en toute transparence un maximum de marques de sport.
+          Nous ne sommes sponsorisés par aucune marque pour la mettre en avant ni pour améliorer son scoring.
+          Notre business modèle fonctionne sur la base de don via Stripe sur notre plateforme.
           </p><br>
           <%= link_to static_pages_a_propos_path do %>
           <div class="btn btn-outline-primary">En savoir plus</div>
@@ -180,7 +138,9 @@ style="
         <div class="card-body">
           <h5 class="card-title">L’équipe derrière le projet</h5><br>
           <p class="card-text">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          Nous sommes un groupe de 5 développeurs et développeuses passionnés par le sport et souscieuse de l'environnement. Rencontrés lors d'un bootcamp en web développement, ils ont souhaité mettre en application leurs compétences en développement information dans la construction de ce site !
+          <br>
+          <br>
           </p><br>
           <%= link_to static_pages_a_propos_path do %>
           <div class="btn btn-outline-primary">En savoir plus</div>
@@ -193,7 +153,9 @@ style="
         <div class="card-body">
           <h5 class="card-title">Nos valeurs</h5><br>
           <p class="card-text">
-          Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est. Amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.
+          Les problèmes environnementaux qui nous touchent, doivent devenir une priorité pour notre génération et les suivantes.
+          Nous devons également prendre conscience de nos modes de consommations et de production.
+          Nous faisons notre possible pour sensibiliser les consommateurs à privilégier les marques de sport éco-responsables.
           </p><br>
           <%= link_to static_pages_a_propos_path do %>
           <div class="btn btn-outline-primary">En savoir plus</div>
@@ -207,7 +169,7 @@ style="
 
 <section class="section-3 pt-5">
 <div class="container pt-5">
-  <h2 class="pb-5">Les derniers acticles de blog</h2>
+  <h2 class="pb-5">Les derniers acticles du blog :</h2>
   <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor fuga odit.</p>
 
   <div class="container">
@@ -243,4 +205,3 @@ style="
   </div>
 </div>
 </section>
-
