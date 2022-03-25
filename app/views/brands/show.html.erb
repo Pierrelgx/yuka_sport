@@ -8,11 +8,11 @@
   <p><h3 class="fw-light">Note générale :
   <%= @brand.rank %></h3></p>
 
-  <% if @brand.rank <=3 %>
+  <% if @brand.rank <=33 %>
     <div class="progress">
       <div class="progress-bar bg-danger" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="100"></div>
     </div>
-  <% elsif @brand.rank <=6 && @brand.rank >3 %>
+  <% elsif @brand.rank <=66 && @brand.rank >33 %>
     <div class="progress">
       <div class="progress-bar bg-warning" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0" aria-valuemax="100"></div>
     </div>
