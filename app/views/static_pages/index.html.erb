@@ -1,37 +1,30 @@
-<div class="px-4 py-5 my-5 text-center" style="background-color:#d1e8ff">
-<img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
-  <h1 class="display-5 fw-bold">Etre sportif et éco-responsable ? C'est possible</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Vous souhaitez savoir où sont fabriqués vos vêtements de sport préférés, et l'impact carbonne ? Vous êtes au bon endroit.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
-      <button type="button" class="btn btn-outline-primary btn-lg px-4 gap-3">🍀</button>
-    
-    </div>
+<div class="header">
+   <div class="px-4 py-5 text-center" 
+  style="
+    background-image: url('https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+    height: 50vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+  <img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold">Etre sportif et éco-responsable ? C'est possible</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Vous souhaitez savoir où sont fabriqués vos vêtements de sport préférés, et l'impact carbonne ? Vous êtes au bon endroit.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <div class="container d-flex justify-content-center">
+        <div class="input-group input-group-lg">
+          <div class="container">
+          <div class="row height d-flex justify-content-center align-items-center">
+            <%= form_tag brands_path, class: "d-flex justify-content-center input-group-lg", method: :get do %>
+            <%= text_field_tag :query,
+            params[:query],
+            placeholder: "Rechercher une marque", :size => 80  %> &nbsp &nbsp
+            <%= submit_tag "C'est parti ! ", class: "btn btn-primary" %>
+            <% end %>
+          </div>
+          </div>
+        </div>
+        </div>  
+      </div>
   </div>
 </div>
-
-<header id="showcase">
-  <div class="container d-flex justify-content-center">
-      <div class="input-group input-group-lg">
-        <div class="container">
-        <div class="row height d-flex justify-content-center align-items-center">
-          <%= form_tag brands_path, class: "d-flex justify-content-center input-group-lg", method: :get do %>
-          <%= text_field_tag :query,
-          params[:query],
-          placeholder: "Rechercher une marque"
-          %>&nbsp &nbsp
-        <%= submit_tag "C'est parti ! ", class: "btn btn-primary" %>
-          <% end %>
-        </div>
-        </div>
-
-      </div>
-
-      </div>
-  </div>
-</header>
-
-
 
   <div class="container pt-5">
     <h2>Clique sur une marque pour <br>découvrir son score :</h2>  <br>  <br>
@@ -71,9 +64,7 @@
       </div>
     </div>
   </div>
-
-    '
-    <div class="album py-5 bg-light">
+  <div class="album py-5 bg-light">
       <div class="container">
 
         <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
@@ -113,10 +104,8 @@
         </div>
       </div>
     </div>
-  </div>
-
-  <ul>
-    <% if user_signed_in? %>
+      <div class="container">
+      <% if user_signed_in? %>
 
       <div class="card mb-4 box-shadow"
       style="background-color:#d1e8ff">
@@ -133,7 +122,6 @@
         </div>
       </div>
 
-
     <% else %>
       <div class="card mb-4 box-shadow">
         <div class="container">
@@ -149,7 +137,13 @@
         </div>
       </div>
     <% end %>
-  </ul>
+
+      </div>
+  </div>
+
+ 
+    
+ 
 
 
 <section id="section-2">
