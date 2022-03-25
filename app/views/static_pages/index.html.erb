@@ -13,11 +13,16 @@
           <div class="container">
           <div class="row height d-flex justify-content-center align-items-center">
             <%= form_tag brands_path, class: "d-flex justify-content-center input-group-lg", method: :get do %>
-            <%= text_field_tag :query,
-            params[:query],
-            placeholder: "Rechercher une marque", :size => 80  %> &nbsp &nbsp
-            <%= submit_tag "C'est parti ! ", class: "btn btn-primary" %>
+            <div>
+              <%= text_field_tag :query,
+              params[:query],
+              placeholder: "Rechercher une marque", class: "px-2", style: 'width: 90%; height: 100%'  %>
+            </div>
+            <div>
+            <%= submit_tag "C'est parti ! ", class: "btn btn-primary", style: 'width: 90%; height: 100%' %>
+            </div>
             <% end %>
+
           </div>
           </div>
         </div>
