@@ -1,24 +1,29 @@
-# README
+# Fair Athlete 🥇
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Fair Athlete référence des dizaines de marques de sport selon un score d'écoresponsabilité. 
 
-Things you may want to cover:
+Découvrir [Fair Athlete](https://yuka-sport-dev.herokuapp.com/#) 🚀
 
-* Ruby version
+## Installation
 
-* System dependencies
+Téléchargez le fichier ZIP ou clonez le repositorie, et :
 
-* Configuration
+```
+bundle install
+rails db:create 
+rails db:migrate
+```
 
-* Database creation
+## Lancer le programme
 
-* Database initialization
+Il ne vous reste plus qu'à lancer l'application en local avec la commande : 
+```
+rails server
+```
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Crédit 
+@Aurelien1997 
+@BenedicteCn 
+@nburd01 
+@Pierrelgx 
+@lexbeaumier
