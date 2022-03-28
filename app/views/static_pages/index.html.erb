@@ -1,72 +1,67 @@
 <div class="header">
   <div class="px-4 py-5 text-center"
-style="
-  background-image: url('https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
-  height: 90vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
-<img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
-  <h1 class="display-5 fw-bold text-white">Etre sportif et éco-responsable ? C'est possible</h1>
+    style="
+    background-image: url('https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+    height: 90vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold text-white pb-2">FAIR ATHLETE</h1>
   <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4 text-white">Vous souhaitez savoir où sont fabriqués vos vêtements de sport préférés, et l'impact carbonne ? Vous êtes au bon endroit.</p>
+    <p class="display-5 text-white">Votre marque est-elle éthique et eco-responsable ?</p>
     <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
       <div class="container d-flex justify-content-center">
-      <div class="input-group input-group-lg">
-        <div class="container">
-        <br>
-        <div class="row g-3">
-          <%= form_tag brands_path, class: "d-flex input-group-lg", method: :get do %>
-
-            <%= text_field_tag :query,
-            params[:query],
-            placeholder: "Rechercher une marque", class: "px-2 me-3 form-control"  %>
-
-
-          <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control", :style => "width:170px;" %>
-
-          <% end %>
+        <div class="input-group input-group-lg">
+          <div class="container">
+          <br>
+            <div class="row g-3">
+              <%= form_tag brands_path, class: "d-flex input-group-lg", method: :get do %>
+                <%= text_field_tag :query,
+                params[:query],
+                placeholder: "Rechercher une marque", class: "px-2 me-3 form-control"  %>
+                <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control", :style => "width:170px;" %>
+              <% end %>
+            </div>
+          </div>
         </div>
-        </div>
-      </div>
       </div>
     </div>
-</div>
+  </div>
 </div>
 <br>
 <div class="container">
-<div class="card-group">
-  <div class="card">
-    <%= image_tag("nike2.png")%>
-    <div class="card-body">
-      <h5 class="card-title">Nike</h5>
-      <p class="card-text">Nike est une marque américaine de sportswear fondée en 1972 par Phil Knight. Le siège social de l'entreprise se situe à Beaverton (Oregon) et, en 2014, le chiffre d'affaires du groupe s'élève à 46 milliards de dollars...</p>
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="card m-2" style="width: 300px;">
+        <img class="card-img" src="https://www.peah.fr/wp-content/uploads/2016/06/nike_logo.jpg" alt="a snow-capped mountain range"/>
+          <div class="card-img-overlay text-white">
+          </div>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <%= image_tag("Adidas-Logo2.png")%>
-    <div class="card-body">
-      <h5 class="card-title">Adidas</h5>
-      <p class="card-text">Les vêtements de sport d’Adidas pour hommes comptent parmi les meilleurs sur le marché. Ils ont développé des vêtements de sport qui épousent parfaitement les formes...</p>
+   <div class="col d-flex justify-content-center">
+    <div class="card m-2" style="width: 300px;">
+      <img class="card-img" src="https://cdn.britannica.com/94/193794-050-0FB7060D/Adidas-logo.jpg" alt="a snow-capped mountain range"/>
+        <div class="card-img-overlay text-white">
+        </div>
+      </div>
     </div>
-  </div>
-  <div class="card">
-    <%=image_tag("Gymshark.png")%>
-    <div class="card-body">
-      <h5 class="card-title">Gymshark</h5>
-      <p class="card-text">La marque a été créée en 2010 par Emily Weiss, une ancienne gymnaste, en collaboration avec Marie Forleo, coach fitness lifestyle et auteure à succès. Fabletics est basé...</p>
+  <div class="col d-flex justify-content-center">
+    <div class="card m-2" style="width: 300px;">
+          <img class="card-img" style="max-width: 300px; max-height: 200px;" src="https://logos-world.net/wp-content/uploads/2022/01/Gymshark-Logo.png" alt="a snow-capped mountain range"/>
+        <div class="card-img-overlay text-white">
+        </div>
+      </div>
     </div>
   </div>
 </div>
-</div>
-<br>
-    <div class="container">
-    <% if user_signed_in? %>
 
-    <div class="card mb-4 box-shadow"
-    style="background-color:#d1e8ff">
+
+<br>
+<div class="container">
+  <% if user_signed_in? %>
+    <div class="card mb-4 box-shadow p-5" style="background-color:#d1e8ff">
       <div class="container">
-        <br>
-        <h2 class="text-center ">Tu ne trouves pas ta marque préférée ? <br> Clique-ci dessous pour qu'elle soit ajoutée sur le site !</h2>
-        <div class="container py-5">
-          <div class="col text-center pb-5">
+        <h2 class="text-center pb-4">Tu ne trouves pas ta marque préférée ? <br> Clique-ci dessous pour qu'elle soit ajoutée sur le site !</h2>
+        <div class="container">
+          <div class="col text-center">
             <%= link_to new_user_registration_path do %>
             <div class="btn btn-primary text-center" style="width:250px" >Soumettre une marque</div>
             <% end %>
@@ -74,14 +69,12 @@ style="
         </div>
       </div>
     </div>
-
   <% else %>
-    <div class="card mb-4 box-shadow">
+    <div class="card mb-4 box-shadow p-5" style="background-color:#d1e8ff">
       <div class="container">
-        <br>
-        <h2 class="text-center pt-2">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
-        <div class="container py-5">
-          <div class="col-md-12 text-center pb-5">
+        <h2 class="text-center pb-4">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
+        <div class="container">
+          <div class="col text-center">
             <%= link_to new_user_registration_path do %>
             <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
             <% end %>
@@ -90,118 +83,44 @@ style="
       </div>
     </div>
   <% end %>
-
-    </div>
-</div>
-
-<section id="section-2">
-<div class="container py-5">
-  <h2 class="pb-5">A propos de Fair Athlete :</h2>
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Notre système de notation</h5><br>
-          <p class="card-text">
-          Nous nous basons sur 5 facteurs afin d’établir le score des marques référencées sur notre plateforme.
-          Les 5 critères sont basés sur le rapport qualité/ et prix, la main d’œuvre au moment de la production, la présence de matière animale dans les tissus et matériaux et l’impact environnemental des marques.  
-          </p><br>
-          <%= link_to static_pages_a_propos_path do %>
-          <div class="btn btn-outline-primary">En savoir plus</div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Nos engagements</h5><br>
-          <p class="card-text">
-          Cette plateforme a pour but de renseigner en toute transparence un maximum de marques de sport.
-          Nous ne sommes sponsorisés par aucune marque pour la mettre en avant ni pour améliorer son scoring.
-          Notre business modèle fonctionne sur la base de don via Stripe sur notre plateforme.
-          </p><br>
-          <%= link_to static_pages_a_propos_path do %>
-          <div class="btn btn-outline-primary">En savoir plus</div>
-          <% end %>
-
-        </div>
-      </div>
-    </div>
   </div>
 </div>
-
-<div class="container">
-  <div class="row">
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">L’équipe derrière le projet</h5><br>
-          <p class="card-text">
-          Nous sommes un groupe de 5 développeurs et développeuses passionnés par le sport et souscieuse de l'environnement. Rencontrés lors d'un bootcamp en web développement, ils ont souhaité mettre en application leurs compétences en développement information dans la construction de ce site !
-          <br>
-          <br>
-          </p><br>
-          <%= link_to static_pages_a_propos_path do %>
-          <div class="btn btn-outline-primary">En savoir plus</div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Nos valeurs</h5><br>
-          <p class="card-text">
-          Les problèmes environnementaux qui nous touchent, doivent devenir une priorité pour notre génération et les suivantes.
-          Nous devons également prendre conscience de nos modes de consommations et de production.
-          Nous faisons notre possible pour sensibiliser les consommateurs à privilégier les marques de sport éco-responsables.
-          </p><br>
-          <%= link_to static_pages_a_propos_path do %>
-          <div class="btn btn-outline-primary">En savoir plus</div>
-          <% end %>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
 
 <section class="section-3 pt-5">
-<div class="container pt-5">
-  <h2 class="pb-5">Les derniers acticles du blog :</h2>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor fuga odit.</p>
+  <div class="container pt-5">
+    <h2 class="pb-5">Les derniers acticles du blog :</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores dolor fuga odit.</p>
 
-  <div class="container">
-    <div class="row">
-      <div class="col-lg-6 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="" alt="">
-          <div class="card-body p-5">
-            <h5 class="card-title">Card title</h5>
-              <p class="card-text">
-                Some quick example text to build on
-                the card title and make up the bulk
-                of the card's content.
-              </p>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 mb-4 d-flex align-items-stretch">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body p-5">
+              <h5 class="card-title">Card title</h5>
+                <p class="card-text">
+                  Some quick example text to build on
+                  the card title and make up the bulk
+                  of the card's content.
+                </p>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="col-lg-6 mb-4">
-        <div class="card">
-          <img class="card-img-top" src="" alt="">
-          <div class="card-body p-5">
-            <h5 class="card-title">Card title</h5>
-            <p class="card-text">
-              Some quick example text to build on the
-              card title and make up the bulk of the
-              card's content.
-            </p>
+        <div class="col-lg-6 mb-4 d-flex align-items-stretch">
+          <div class="card">
+            <img class="card-img-top" src="" alt="">
+            <div class="card-body p-5">
+              <h5 class="card-title">Card title</h5>
+              <p class="card-text">
+                Some quick example text to build on the
+                card title and make up the bulk of the
+                card's content.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
 </section>
