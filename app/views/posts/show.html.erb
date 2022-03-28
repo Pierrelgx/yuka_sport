@@ -1,8 +1,9 @@
+<div class="container p-5 my-5 border">
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <h1 class="fw-strong"> <%= @post.title %> </h1>
 </p>
 
 <p>
@@ -10,11 +11,19 @@
   <%= @post.description %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+<a href="<%= posts_path %>" class="btn btn-primary m-3 rounded-pill">Revenir à l'ensemble des articles de blog</a>
 
-<%# <h3 style="color:#8064A2"> Ajouter un commentaire :</h3>
-  <%= form_tag (brand_comments_path(@brand.id)) do%>
-        <%# <%= text_area_tag 'content', nil, class: "form-control area"%>
-        <%# <%= submit_tag "Envoyer", class: 'button my-3' %>
-  <%# <% end %> %>
+</div>
+
+<div class="container p-5 my-5 border">
+
+<h3 class="fw-light"> Ajouter un commentaire :</h3>
+
+</div>
+
+<div class="container p-5 my-5 border">
+
+<h3 class="fw-light"> Commentaires :</h3>
+
+
+</div>
