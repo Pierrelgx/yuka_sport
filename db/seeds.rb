@@ -102,3 +102,4 @@ Post.create!(
   N°2: NOSC : Là encore, la marque propose des vêtements en Tencel®, Nylon et polyester recyclé. Plus original : NOSC a dernièrement développé la première tenue faite à partir … d’huile de ricin ! Hyper original, non ?
   N°3 : Circle : La marque donne accès à ses abonnées une tenue de sport échangeable et garantie à vie !"
 );
+AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
