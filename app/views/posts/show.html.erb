@@ -1,8 +1,9 @@
+<div class="container p-5 my-5 border">
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>Title:</strong>
-  <%= @post.title %>
+  <h1 class="fw-strong"> <%= @post.title %> </h1>
 </p>
 
 <p>
@@ -10,6 +11,23 @@
   <%= @post.description %>
 </p>
 
+<a href="<%= posts_path %>" class="btn btn-primary m-3 rounded-pill">Revenir à l'ensemble des articles de blog</a>
+
+</div>
+
+<div class="container p-5 my-5 border">
+
+<h3 class="fw-light"> Ajouter un commentaire :</h3>
+
+</div>
+
+<div class="container p-5 my-5 border">
+
+<h3 class="fw-light"> Commentaires :</h3>
+
+
+</div>
+=======
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Back', posts_path %>
 
