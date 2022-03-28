@@ -1,0 +1,54 @@
+<div class="header">
+  <div class="px-4 py-5 text-center"
+    style="
+    background-image: url('https://images.unsplash.com/photo-1547483238-f400e65ccd56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+    height: 90vh; background-position: center; background-repeat: no-repeat; background-size: cover;">
+    <img class="d-block mx-auto mb-4" src="https://img.icons8.com/fluency/344/forest.png" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold text-white pb-2">FAIR ATHLETE</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="display-5 text-white">Votre marque est-elle éthique et eco-responsable ?</p>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+      <div class="container d-flex justify-content-center">
+        <div class="input-group input-group-lg">
+          <div class="container">
+          <br>
+            <div class="row g-3">
+              <%= form_tag brands_path, class: "d-flex input-group-lg", method: :get do %>
+                <%= text_field_tag :query,
+                params[:query],
+                placeholder: "Rechercher une marque", class: "px-2 me-3 form-control"  %>
+                <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control", :style => "width:170px;" %>
+              <% end %>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<br>
+<div class="container">
+  <div class="row">
+    <div class="col d-flex justify-content-center">
+      <div class="card m-2" style="width: 300px;">
+        <img class="card-img" src="https://www.peah.fr/wp-content/uploads/2016/06/nike_logo.jpg" alt="a snow-capped mountain range"/>
+          <div class="card-img-overlay text-white">
+          </div>
+      </div>
+    </div>
+   <div class="col d-flex justify-content-center">
+    <div class="card m-2" style="width: 300px;">
+      <img class="card-img" src="https://cdn.britannica.com/94/193794-050-0FB7060D/Adidas-logo.jpg" alt="a snow-capped mountain range"/>
+        <div class="card-img-overlay text-white">
+        </div>
+      </div>
+    </div>
+  <div class="col d-flex justify-content-center">
+    <div class="card m-2" style="width: 300px;">
+          <img class="card-img" style="max-width: 300px; max-height: 200px;" src="https://logos-world.net/wp-content/uploads/2022/01/Gymshark-Logo.png" alt="a snow-capped mountain range"/>
+        <div class="card-img-overlay text-white">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

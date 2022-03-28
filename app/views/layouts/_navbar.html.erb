@@ -1,0 +1,70 @@
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand px-2" href="<%= root_path %>">FAIR ATHLETE</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse px-5" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a class="nav-link text-primary" href="<%= brands_path %>">Marques</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="<%= posts_path %>">Blog</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="<%= static_pages_a_propos_path %> ">A propos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="<%= static_pages_concept_path %>">Concept</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-primary" href="<%= static_pages_contact_path %>">Contact</a>
+        </li>
+        <li class="nav-item">
+        <div class="mt-1">
+          <%= form_tag charges_path do %>
+            <article>
+              <% if flash[:error].present? %>
+                <div id="error_explanation">
+                  <p><%= flash[:error] %></p>
+                </div>
+              <% end %>
+            </article>
+
+            <script
+              src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+              data-description="Donation"
+              data-amount="500"
+              data-label="Faire un don ♥️"
+              data-locale="auto">
+            </script>
+          <% end %>
+        </div>
+        </li>
+      </ul>
+    </div>
+    <div class="collapse navbar-collapse justify-content-end align-items-center" id="navbarSupportedContent1">
+      <ul class="m-0">
+            <% if user_signed_in? %>
+
+
+            <button type="button" class="btn btn-light"><%= current_user.email %></button>
+
+
+            <button type="button" class="btn btn-light"><%= link_to "Mon profil", user_path(current_user.id)%></button>
+
+
+            <button type="button" class="btn btn-outline-light"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete%></button>
+
+
+
+            <% else %>
+            <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+              <li class="nav-item"><a href="<%=new_user_session_path%>" class="btn btn-outline-primary">Se connecter</a></li>
+              <li class="nav-item px-3"><a href="<%=new_user_registration_path%>" class="btn btn-primary" > S'inscrire </a></li>
+            </ul>
+            <% end %>
+          </ul>
+    </div>
+  </nav>
