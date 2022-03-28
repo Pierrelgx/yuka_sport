@@ -1,0 +1,16 @@
+<div class="px-4 py-5 my-5 text-center">
+  <ul class="list-group">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <a><strong>Marque</a>
+      <span class="badge bg-primary rounded-pill">Classement</span>
+    </li>
+  <% @brands.each do |brand| %>
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <%= link_to brand_path(brand.id) do %>
+        <div class="btn btn-outline-primary"><%= brand.name %></div>
+        <% end %>
+        <span class="badge bg-primary rounded-pill"><%= brand.rank %></span>
+      <% end %>
+    </li>
+  </ul>
+</div>
