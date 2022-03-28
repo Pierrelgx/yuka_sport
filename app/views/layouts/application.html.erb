@@ -26,7 +26,7 @@
           <a class="nav-link text-primary" href="<%= brands_path %>">Marques</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-primary" href="#">Blog</a>
+          <a class="nav-link text-primary" href="<%= posts_path %>">Blog</a>
         </li>
         <li class="nav-item">
           <a class="nav-link text-primary" href="<%= static_pages_a_propos_path %> ">A propos</a>
@@ -67,14 +67,14 @@
 
 
             <button type="button" class="btn btn-light"><%= current_user.email %></button>
-                
-              
+
+
             <button type="button" class="btn btn-light"><%= link_to "Mon profil", user_path(current_user.id)%></button>
-              
-              
+
+
             <button type="button" class="btn btn-outline-light"><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete%></button>
-                
-              
+
+
 
             <% else %>
             <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
@@ -83,7 +83,7 @@
             </ul>
             <% end %>
           </ul>
-    </div>  
+    </div>
   </nav>
 </header>
 <body>

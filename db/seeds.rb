@@ -85,3 +85,20 @@ Brand.create!(
   labour: rand(0..100),
   environment: rand(0..100)
 );
+
+Post.create!(
+  title: "La marque Adidas est-elle souscieuse de l'environnement ?",
+  description: "Adidas a éliminé certaines matières polluantes de sa production, notamment du  PVC dans toutes les catégories de produits qu’il fabrique. À présent, 99% des produits de la marque ne contiennent pas PVC. Adidas investit également dans le coton durable, en l’utilisant exclusivement et en encourageant les producteurs de ce type de coton en injectant des fonds dans le projet  << Initiative pour un Coton meilleur >>."
+);
+
+Post.create!(
+  title: "Travail des Ouighours: quelles marques de sport sont concernées ?",
+  description: "En mars 2020, l'Institut australien de stratégie politique (ASPI) a publié un rapport selon lequel des milliers de Ouïghours auraient été envoyés, depuis des camps d'internement, travailler dans des usines fournissant plus de 80 grandes marques, entre 2017 et 2019, comme le rapportait alors Marianne. Parmi elles, de grands noms de la téléphonie, de l'électronique mais aussi des marques de prêt-à-porter et de l'automobile. On retrouve comme marques de sport Nike, Abercrombie & Fitch (dont la marque Hollister) ou encore Skechers"
+);
+
+Post.create!(
+  title: "Notre sélection de 3 marques de sport made in France & éco-responsables pour femmes",
+  description: "N°1 : Gayaskin : Leurs matières premières sont 100% made in Europe et la marque garantit une totale transparence de sa production.
+  N°2: NOSC : Là encore, la marque propose des vêtements en Tencel®, Nylon et polyester recyclé. Plus original : NOSC a dernièrement développé la première tenue faite à partir … d’huile de ricin ! Hyper original, non ?
+  N°3 : Circle : La marque donne accès à ses abonnées une tenue de sport échangeable et garantie à vie !"
+);
