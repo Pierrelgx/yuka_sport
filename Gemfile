@@ -76,3 +76,11 @@ gem 'dotenv-rails'
 gem 'pg_search', '~> 2.3.0'
 
 gem 'figaro'
+
+gem 'activeadmin'
+
+gem 'cancancan'
+
+gem 'draper'
+
+gem 'pundit'
