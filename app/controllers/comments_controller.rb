@@ -35,6 +35,22 @@ class CommentsController < ApplicationController
     end
   end
 
+  #def create
+  #  @post = Post.find(params[:post_id])
+  #  @comment = Comment.new(
+  #    content: params[:content],
+  #    user_id: current_user.id,
+  #    post_id: params[:post_id]
+  #  )
+
+  #  if @comment.save
+  #      redirect_to post_path(@post.id)
+  #  else
+  #    render @post
+  #  end
+  #end
+
+
   # PATCH/PUT /comments/1 or /comments/1.json
   def update
     respond_to do |format|
