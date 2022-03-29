@@ -6,6 +6,9 @@
   <h1 class="fw-strong"> <%= @post.title %> </h1>
 </p>
 
+
+<%# <img src="app/assets/images/blog/<%=@random_image%>
+
 <p>
   <strong>Description:</strong>
   <%= @post.description %>
@@ -17,22 +20,27 @@
 
 <div class="container p-5 my-5 border">
 
-<h3 class="fw-light"> Ajouter un commentaire :</h3>
+<h4 class="fw-light"> Ajouter un commentaire :</h3>
+
+<%= render 'comments/form', comment: @comment %>
 
 </div>
 
 <div class="container p-5 my-5 border">
 
-<h3 class="fw-light"> Commentaires :</h3>
+<h4 class="fw-light"> Derniers commentaires :</h3>
 
+
+  <div class="container row justify-content-center">
+    <% @comments.each do |comment| %>
+      <% if comment.post_id == @poqr.id%>
+      <div class="card mb-3 mx-4 card-home" style="width: 18rem;">
+        <div class="card-body">
+          <p class="card-text"><em><%= comment.content %></em></p>
+        </div>
+      </div>
+      <% end %>
+    <% end %>
+  </div>
 
 </div>
-=======
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
-
-<%# <h3 style="color:#8064A2"> Ajouter un commentaire :</h3>
-  <%= form_tag (brand_comments_path(@brand.id)) do%>
-        <%# <%= text_area_tag 'content', nil, class: "form-control area"%>
-        <%# <%= submit_tag "Envoyer", class: 'button my-3' %>
-  <%# <% end %> %>

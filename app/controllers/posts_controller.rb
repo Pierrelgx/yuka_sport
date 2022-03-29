@@ -8,8 +8,11 @@ class PostsController < ApplicationController
 
   # GET /posts/1 or /posts/1.json
   def show
+    #@images  = ["1.jpeg", "2.jpg", "3.jpg", "4.jpg"]
+    #@random_no = rand(4)
+    #@random_image = @images[@random_no]
+    @comments = Comment.all
   end
-
   # GET /posts/new
   def new
     @post = Post.new
