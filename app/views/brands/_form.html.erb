@@ -1,5 +1,3 @@
-<form class="row g-3">
-
 <%= form_with(model: brand, local: true) do |form| %>
   <% if brand.errors.any? %>
     <div id="error_explanation">
@@ -57,5 +55,3 @@
     <%= form.submit %>
   </div>
 <% end %>
-
-</form>
