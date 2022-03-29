@@ -9,5 +9,13 @@ class Brand < ApplicationRecord
     using: {
       tsearch: { prefix: true }
     }
+    
+
+  validates :name, length: { minimum: 2 }
+  validates :name, :uniqueness => { :message => "Cette marque existe déjà"}
+
+  
 
 end
+
+
