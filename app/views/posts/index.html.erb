@@ -6,24 +6,15 @@
 
 <div class="container p-5 my-5 border">
 <table>
-  <thead>
-    <tr>
-      <th>Titre</th>
-      <th>Description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
 
-  <tbody>
-    <% @posts.each do |post| %>
-      <tr>
-        <td><%= post.title %></td>
-        <td><%= post.description %></td>
-        <td><%= link_to "Consulter l'article", post %></td>
-      </tr>
-    <% end %>
-  </tbody>
+  <% @posts.each do |post| %>
+      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+        <div class="col p-4 d-flex flex-column position-static">
+          <h3 class="mb-0"><%= post.title %></h3>
+          <p class="card-text mb-auto"><%= post.description %></p>
+          <a href="#" class="stretched-link"><%= link_to "Consulter l'article", post %></a>
+    </div>
+  <% end %>
 </table>
 
-<br>
-</div>
+
