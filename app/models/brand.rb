@@ -1,6 +1,6 @@
 class Brand < ApplicationRecord
 
-  has_many :likes
+  has_many :likes, dependent: :destroy
   has_many :posts
 
   include PgSearch::Model
