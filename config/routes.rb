@@ -8,7 +8,11 @@ Rails.application.routes.draw do
   resources :brands
   resources :user
   resources :charges
-  
+
+  resources :brands do
+    resources :likes
+  end
+
   root 'static_pages#index'
 
 

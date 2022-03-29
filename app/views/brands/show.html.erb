@@ -2,7 +2,6 @@
 <div class="container p-5 my-5 border">
 
 <h1 class="fw-light"><%= @brand.name %></h1>
-<br>
 
 <div class ="contrainer">
   <p><h3 class="fw-light">Note générale :
@@ -21,6 +20,11 @@
       <div class="progress-bar bg-success" role="progressbar" style="width: <%= @brand.rank %>%;" aria-valuenow="<%= @brand.rank %>" aria-valuemin="0"  aria-valuemax="10"></div>
     </div>
   <% end %>
+
+<br>
+  <%= button_to 'Like', brand_likes_path(@brand), method: :post %>
+  <p><%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+
 </div>
 <br>
 <p id="notice"><%= notice %></p>
@@ -58,6 +62,7 @@
 </tr>
 
 </table>
+
 
 <%= link_to 'Modifier', edit_brand_path(@brand) %> |
 <%= link_to 'Retour à la liste des marques', brands_path %>
