@@ -49,9 +49,6 @@
             <% if user_signed_in? %>
 
 
-            <button type="button" class="btn btn-light"><%= current_user.email %></button>
-
-
             <button type="button" class="btn btn-light"><%= link_to "Mon profil", user_path(current_user.id)%></button>
 
 
