@@ -22,8 +22,7 @@
   <% end %>
 
 <br>
-  <%= button_to 'Like', brand_likes_path(@brand), method: :post %>
-  <p><%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like' : 'Likes'%></p>
+  <a><%= button_to '❤️ ', brand_likes_path(@brand), class: 'btn btn-light', method: :post %> <%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like' : 'Likes'%></a>
 
 </div>
 <br>
