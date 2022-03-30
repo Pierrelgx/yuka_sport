@@ -4,17 +4,22 @@
 <h1 class="fw-light">Posts</h1>
 </div>
 
-<div class="container p-5 my-5 border">
-<table>
 
-  <% @posts.each do |post| %>
-      <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-          <h3 class="mb-0"><%= post.title %></h3>
-          <p class="card-text mb-auto"><%= post.description %></p>
-          <a href="#" class="stretched-link"><%= link_to "Consulter l'article", post %></a>
-    </div>
-  <% end %>
-</table>
-
-
+<div class="album py-5">
+<div class="container">
+ <div class="row">
+<% @posts.each do |post| %>
+            <div class="col-md-4">
+              <div class="card mb-4 box-shadow">
+                <div class="card-body">
+                <h3 class="display-7"><%= post.title %></h3>
+                  <p class="card-text"><%= post.description %></p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <%= link_to "Consulter l'article", post %>                    
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+<% end %>
