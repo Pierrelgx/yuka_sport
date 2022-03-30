@@ -1,30 +1,29 @@
-<div class="container">
-  <% if user_signed_in? %>
-    <div class="card mb-4 box-shadow p-5" style="background-color:#d1e8ff">
+
+<% if user_signed_in? %>
+  <div class="card mb-4 box-shadow p-5" style="background-color:#d1e8ff">
+    <div class="container">
+      <h2 class="text-center pb-4">Tu ne trouves pas ta marque préférée ? <br> Clique-ci dessous pour qu'elle soit ajoutée sur le site !</h2>
       <div class="container">
-        <h2 class="text-center pb-4">Tu ne trouves pas ta marque préférée ? <br> Clique-ci dessous pour qu'elle soit ajoutée sur le site !</h2>
-        <div class="container">
-          <div class="col text-center">
-            <%= link_to new_user_registration_path do %>
-            <div class="btn btn-primary text-center" style="width:250px" >Soumettre une marque</div>
-            <% end %>
-          </div>
+        <div class="col text-center">
+          <%= link_to new_user_registration_path do %>
+          <div class="btn btn-primary text-center" style="width:250px" >Soumettre une marque</div>
+          <% end %>
         </div>
       </div>
     </div>
-  <% else %>
-    <div class="card mb-4 box-shadow p-5" style="background-color:#d1e8ff">
-      <div class="container">
-        <h2 class="text-center pb-4">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
-        <div class="container">
-          <div class="col text-center">
-            <%= link_to new_user_registration_path do %>
-            <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
-            <% end %>
-          </div>
-        </div>
-      </div>
-    </div>
-  <% end %>
   </div>
+<% else %>
+  <div class="card mb-4 box-shadow p-5" style="background-color:#d1e8ff">
+    <div class="container">
+      <h2 class="text-center pb-4">Tu ne trouves pas ta marque préférée ? <br>Inscris toi pour pouvoir la rajouter !</h2>
+      <div class="container">
+        <div class="col text-center">
+          <%= link_to new_user_registration_path do %>
+          <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+<% end %>
 </div>
