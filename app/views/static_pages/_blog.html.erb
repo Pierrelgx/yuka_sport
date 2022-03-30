@@ -4,7 +4,7 @@
             <% @post.each do |post| %>
             <div class="col-lg-4 d-flex align-items-stretch">
                 <div class="card mb-4 box-shadow">
-                    <img class="card-img-top" data-src="#" alt="Thumbnail [100%x100%]" style="height: 100%; width: 100%; display: block;" src="#" data-holder-rendered="true">
+                        <%= image_tag"nike#{post.id}.png", :alt => "", :class => "card-img-top align-items-stretch", :style => "height: 100%; width: 100%; display: block;"%>
                     <div class="card-body">
                         <h3 class="display-7"><%= post.title %></h3>
                         <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
@@ -17,6 +17,4 @@
         </div>
     </div>
 </div>
-
-    
 <% end %>
