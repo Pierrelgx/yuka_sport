@@ -1,35 +1,5 @@
-<main>
+<%= render 'submitbrands'%>
 
-<p id="notice"><%= notice %></p>
-
-<div class="px-4 py-5 my-5 text-center">
-      <div class="col-lg-6 col-md-8 mx-auto">
-        <h1 class="fw-light">Les marques présentes</h1>
-          <p class="lead text-muted">Retrouvez vos marques préférées ci-dessous afin de découvrir leur note selon différents critères : la qualité et le prix de leurs produits, les aspects environnementaux, sociaux ou encore humains des conditions de production.</p>
-
-          <p> Vous ne trouvez pas la marque que vous recherchez ? Proposez nous votre idée ! 😎 </p>
-
-            <% if user_signed_in? %>
-                <div class="container">
-                  <a href="<%= new_brand_path %>" class="btn btn-outline-primary my-2">Soumettre une marque</a>
-                </div>
-
-            <% else %>
-                <div class="container">
-                    <div class="col-md-12 text-center pb-5">
-                      <%= link_to new_user_registration_path do %>
-                      <div class="btn btn-primary text-center" style="width:150px" >S'inscrire</div>
-                      <% end %>
-                    </div>
-                  </div>
-                </div>
-            <% end %>
-          </p>
-  </div>
-</div>
 <div class="container">
   <%= render 'brand_list'%>
 </div>
-
-
-</main>
