@@ -1,3 +1,7 @@
+
+Brand.destroy_all
+Post.destroy_all
+
 Brand.create!(
     name: "Nike",
     description: "Nike est un acteur majeur du marché du sportswear. La marque commercialise des vêtements, chaussures, équipements et accessoires de sport. Elle est présente dans plus de 80 pays et compte quelques grands noms dans le monde du football : l'attaquant brésilien Neymar Jr, le milieu de terrain français Paul Pogba, le défenseur allemand Mats Hummels, les attaquants argentins Lionel Messi et Luis Suarez ou encore l’ailier algérien Riyad Mahrez. Le club de football Manchester United est sous contrat avec Nike depuis 2006. En 2012, la société reçoit des critiques pour la suppression d'emplois dans ses usines en Chine.",
@@ -250,19 +254,19 @@ Brand.create!(
 
 Post.create!(
   title: "La marque Adidas est-elle souscieuse de l'environnement ?",
-  description: "Adidas a éliminé certaines matières polluantes de sa production, notamment du  PVC dans toutes les catégories de produits qu’il fabrique. À présent, 99% des produits de la marque ne contiennent pas PVC. Adidas investit également dans le coton durable, en l’utilisant exclusivement et en encourageant les producteurs de ce type de coton en injectant des fonds dans le projet  << Initiative pour un Coton meilleur >>."
+  description: "Adidas a éliminé certaines matières polluantes de sa production, notamment du  PVC dans toutes les catégories de produits qu’il fabrique. À présent, 99% des produits de la marque ne contiennent pas PVC. Adidas investit également dans le coton durable, en l’utilisant exclusivement et en encourageant les producteurs de ce type de coton en injectant des fonds dans le projet  'Initiative pour un Coton meilleur'. La marque sort également des produits éco-responsables, comme par exemple en 2015 avec Parley for the Oceans. Les deux marques avaient alors présenté une chaussure dotée d’une tige entièrement fabriquée grâce à des fibres et des fils issus de déchets plastiques marins recyclés. En parallèle, le groupe bavarois travaille à son programme de Green Company, où le siège et 5 sites nord-américains ont été mis aux normes de l'Iso 14001 : 'Notre stratégie en matière de développement durable est également le fondement pour une meilleure efficacité et des innovations. Cette stratégie est primordiale pour le succès', commente Herbert Hainer, le CEO."
 );
 
 Post.create!(
   title: "Travail des Ouighours: quelles marques de sport sont concernées ?",
-  description: "En mars 2020, l'Institut australien de stratégie politique (ASPI) a publié un rapport selon lequel des milliers de Ouïghours auraient été envoyés, depuis des camps d'internement, travailler dans des usines fournissant plus de 80 grandes marques, entre 2017 et 2019, comme le rapportait alors Marianne. Parmi elles, de grands noms de la téléphonie, de l'électronique mais aussi des marques de prêt-à-porter et de l'automobile. On retrouve comme marques de sport Nike, Abercrombie & Fitch (dont la marque Hollister) ou encore Skechers"
+  description: "En mars 2020, l'Institut australien de stratégie politique (ASPI) a publié un rapport selon lequel des milliers de Ouïghours auraient été envoyés, depuis des camps d'internement, travailler dans des usines fournissant plus de 80 grandes marques, entre 2017 et 2019, comme le rapportait alors Marianne. Parmi elles, de grands noms de la téléphonie, de l'électronique mais aussi des marques de prêt-à-porter et de l'automobile. On retrouve comme marques de sport Nike, Abercrombie & Fitch (dont la marque Hollister) ou encore Skechers. De son côté, Nike, comme les 83 autres multinationales mises en cause l'an passé, nie toute implication dans l'exploitation des Ouïghours ou dans un effort de lobbying auprès du Congrès américain. Pourtant, près de sept millions de paires de chaussures auraient été fabriqués par des centaines de Ouïghours, forcés à travailler dans une usine Nike, située dans la région de Xinjiang et entourée de barbelés. Depuis la publication du rapport révélant la situation, Nike aurait aussi poursuivi sa collaboration avec le fournisseur Qingdao Taekwang Shoes Co. Ltd, accusé d'avoir transféré 600 ouvriers ouïghours originaires de la province du Xinjiang dans ses usines en janvier 2020. Rapellons que les États-Unis accusent la Chine de génocide et de crimes contre l'humanité dans la région du Xinjiang, citant la détention de plus d'un million de personnes, principalement issues de minorités musulmanes, dans des camps de travail forcé. Pékin nie ces accusations."
 );
 
 Post.create!(
   title: "Notre sélection de 3 marques de sport made in France & éco-responsables pour femmes",
-  description: "N°1 : Gayaskin : Leurs matières premières sont 100% made in Europe et la marque garantit une totale transparence de sa production.
-  N°2: NOSC : Là encore, la marque propose des vêtements en Tencel®, Nylon et polyester recyclé. Plus original : NOSC a dernièrement développé la première tenue faite à partir … d’huile de ricin ! Hyper original, non ?
-  N°3 : Circle : La marque donne accès à ses abonnées une tenue de sport échangeable et garantie à vie !"
+  description: "N°1 : Gayaskin : Leurs matières premières sont 100% made in Europe et la marque garantit une totale transparence de sa production. Concrètement, GAYASKIN propose plusieurs gammes de vêtements aux designs exclusif et originaux avec des tissus respirants, confortables, résistants et adaptés à tout type d’activité sportive comme le yoga, le running, les séances de sport en salle ou les randonnées de l’été.
+  N°2: NOSC : Créée dans la vallée de Chamonix, au plus près des glaciers, la marque Nosc a pour mission de concevoir des produits de sport techniques, polyvalents et responsables. Sportifs et aventuriers dans l’âme, les fondateurs Nathan et Maugan ont voulu agir face aux changements climatiques en proposant une marque de sport éthique et respecteuse de l’environnement. Là encore, la marque propose des vêtements en Tencel®, Nylon et polyester recyclé. Plus original : NOSC a dernièrement développé la première tenue faite à partir … d’huile de ricin ! Hyper original, non ?
+  N°3 : Circle : Circle Sportswear est une marque française, pionnière dans le vêtement de sport recyclé, fabriqué en Europe. La marque donne accès à ses abonnées une tenue de sport échangeable et garantie à vie !"
 );
 
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?

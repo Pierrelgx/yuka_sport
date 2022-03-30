@@ -1,9 +1,10 @@
+<h3 class="fw-light">Ajouter un commentaire : </h3>
+<br>
 <%= form_for([@post, @post.comments.build]) do |f| %>
   <p>
-    <%= f.label :content %><br>
     <%= f.text_area(:content, {:class => 'form-control'}) %>
   </p>
   <p>
-    <%= f.submit({:class => 'btn btn-default'}) %>
+    <%= f.submit(:Ajouter, {:class => 'btn btn-primary'}) %>
   </p>
 <% end %>

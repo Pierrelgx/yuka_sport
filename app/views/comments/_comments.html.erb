@@ -1,10 +1,12 @@
-<h3>Comments</h3>
+<h3 class="fw-light">Commentaires : </h3>
 <% @post.comments.each do |comment| %>
   <div class="well">
-    <p><%= comment.content %>
-      <%= link_to '[X]', [comment.post, comment],
+  <ul class="list-group">
+    <li class="list-group-item"><%= comment.content %>
+      <%= link_to '[Supprimer]', [comment.post, comment],
                     method: :delete,
-                    data: { confirm: 'Are you sure?' } %>
-    </p>
+                    data: { confirm: 'Êtes-vous sûr ?' } %>
+    </li>
+  </ul>
   </div>
 <% end %>
