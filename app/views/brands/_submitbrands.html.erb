@@ -1,11 +1,12 @@
 
 
-<div class="px-4 py-5 my-5 text-center container" style="background-color:#d1e8ff">
+<div class="px-4 py-5 my-5 text-center container">
 <p id="notice"><%= notice %></p>
-      <div class="col-lg-6 col-md-8 mx-auto">
+      <div class="col-lg-10 col-md-8 mx-auto">
         <h1 class="fw-light">Les marques présentes</h1>
+        <br>
           <p class="lead text-muted">Retrouvez vos marques préférées ci-dessous afin de découvrir leur note selon différents critères : la qualité et le prix de leurs produits, les aspects environnementaux, sociaux ou encore humains des conditions de production.</p>
-
+        <br>
           <p> Vous ne trouvez pas la marque que vous recherchez ? Proposez nous votre idée ! 😎 </p>
 
             <% if user_signed_in? %>
@@ -23,6 +24,5 @@
                   </div>
                 </div>
             <% end %>
-          </p>
   </div>
 </div>
