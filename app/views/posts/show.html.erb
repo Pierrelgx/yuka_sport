@@ -1,6 +1,20 @@
-<h2><%= @post.title %></h2>
-<p><%= @post.description %></p>
+<br>
+<div class = "container">
+<h1 class="fw-light"><%= @post.title %></h2>
+</div>
 
-<%= render 'comments/comments' %>
+<div class="container p-5 my-5 border">
+  <p><%= @post.description %></p>
+  <div style="display: flex; justify-content: flex-end">
+    <footer class="blockquote-footer"><p><%= @post.created_at %></p></footer>
+  </div>
 
-<%= render 'comments/form' %>
+</div>
+
+<div class="container p-4 my-5 border">
+  <%= render 'comments/comments' %>
+</div>
+
+<div class="container p-4 my-5 border">
+  <%= render 'comments/form' %>
+</div>
