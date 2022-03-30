@@ -22,7 +22,20 @@
   <% end %>
 
 <br>
-  <a><%= button_to '❤️ ', brand_likes_path(@brand), class: 'btn btn-light', method: :post %> <%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like' : 'Likes'%></a>
+  <% if user_signed_in? %>
+
+    <% if @brand.likes.find { |like| like.user_id == current_user.id} %>
+      <%= button_to "💔", brand_like_path(@brand, @brand.likes.find { |like| like.user_id == current_user.id} ), class: 'btn btn-light', method: :delete %>
+    <% else %>
+      <%= button_to '❤️', brand_likes_path(@brand), class: 'btn btn-light', method: :post %>
+    <% end %>
+    <br>
+    <%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like ❤️' : 'Likes ❤️'%>
+
+  <% else %>
+    <%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like ❤️' : 'Likes ❤️'%>
+  <% end %>
+
 
 </div>
 <br>
@@ -62,8 +75,6 @@
 
 </table>
 
-
-<%= link_to 'Modifier', edit_brand_path(@brand) %> |
-<%= link_to 'Retour à la liste des marques', brands_path %>
+<%= link_to 'Retour à la liste des marques.', brands_path %>
 
 </div>
