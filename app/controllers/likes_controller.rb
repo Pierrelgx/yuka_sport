@@ -1,5 +1,4 @@
 class LikesController < ApplicationController
-  before_action :authenticate_user, only: [:new, :create, :show, :destroy]
   before_action :find_brand
   before_action :find_like, only: [:destroy]
 
@@ -37,10 +36,4 @@ class LikesController < ApplicationController
   @like = @brand.likes.find(params[:id])
   end
 
- def authenticate_user
-    unless current_user
-      flash[:danger] = "Merci de vous identifier !"
-      redirect_to user_session_path
-    end
-  end
 end
