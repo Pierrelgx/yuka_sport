@@ -3,9 +3,19 @@
   <div class="well">
   <ul class="list-group">
     <li class="list-group-item"><%= comment.content %>
-      <%= link_to '[Supprimer]', [comment.post, comment],
+
+            <% if user_signed_in? %>
+
+                    <%= link_to '[Supprimer]', [comment.post, comment],
                     method: :delete,
                     data: { confirm: 'Êtes-vous sûr ?' } %>
+
+            <% else %>
+                    </div>
+                  </div>
+                </div>
+            <% end %>
+
     </li>
   </ul>
   </div>
