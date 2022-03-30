@@ -1,46 +1,6 @@
-<div class="container p-5 my-5 border">
+<h2><%= @post.title %></h2>
+<p><%= @post.description %></p>
 
-<p id="notice"><%= notice %></p>
+<%= render 'comments/comments' %>
 
-<p>
-  <h1 class="fw-strong"> <%= @post.title %> </h1>
-</p>
-
-
-<%# <img src="app/assets/images/blog/<%=@random_image%>
-
-<p>
-  <strong>Description:</strong>
-  <%= @post.description %>
-</p>
-
-<a href="<%= posts_path %>" class="btn btn-primary m-3 rounded-pill">Revenir à l'ensemble des articles de blog</a>
-
-</div>
-
-<div class="container p-5 my-5 border">
-
-<h4 class="fw-light"> Ajouter un commentaire :</h3>
-
-<%= render 'comments/form', comment: @comment %>
-
-</div>
-
-<div class="container p-5 my-5 border">
-
-<h4 class="fw-light"> Derniers commentaires :</h3>
-
-
-  <div class="container row justify-content-center">
-    <% @comments.each do |comment| %>
-      <% if comment.post_id == @poqr.id%>
-      <div class="card mb-3 mx-4 card-home" style="width: 18rem;">
-        <div class="card-body">
-          <p class="card-text"><em><%= comment.content %></em></p>
-        </div>
-      </div>
-      <% end %>
-    <% end %>
-  </div>
-
-</div>
+<%= render 'comments/form' %>
