@@ -22,7 +22,7 @@
   <% end %>
 
 <br>
-  <a><%= button_to '❤️ ', brand_likes_path(@brand), class: 'btn btn-light', method: :post %> <%= @brand.likes.count %> <%= (@brand.likes.count) == 1 ? 'Like' : 'Likes'%></a>
+  <a><%= button_to '❤️ ', brand_likes_path(@brand), class: 'btn btn-light', method: :post %> <%= @brand.likes.count %> <%= (@brand.likes.count) == 1 || 0 ? 'Like' : 'Likes'%></a>
 
 </div>
 <br>
@@ -62,8 +62,6 @@
 
 </table>
 
-
-<%= link_to 'Modifier', edit_brand_path(@brand) %> |
 <%= link_to 'Retour à la liste des marques', brands_path %>
 
 </div>
