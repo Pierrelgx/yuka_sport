@@ -11,11 +11,9 @@ class Brand < ApplicationRecord
     }
     
 
-
   validates :name, length: { minimum: 2 }
-  validates :name, :uniqueness => { :message => "Cette marque existe déjà", :class => 'btn btn-primary btn-sm'}
+  validates :name, :uniqueness => { :message => "Cette marque existe déjà"}
   validates :rank, presence: true
-
 
   
 
