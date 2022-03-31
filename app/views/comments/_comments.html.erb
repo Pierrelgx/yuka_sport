@@ -1,22 +1,15 @@
-<h3 class="fw-light">Commentaires : </h3>
+<h3 class="fw-light">Commentaires :</h3>
 <% @post.comments.each do |comment| %>
-  <div class="well">
+
+<div class="well">
   <ul class="list-group">
     <li class="list-group-item"><%= comment.content %>
-
-            <% if user_signed_in? %>
-
-                    <%= link_to '[Supprimer]', [comment.post, comment],
-                    method: :delete,
-                    data: { confirm: 'Êtes-vous sûr ?' } %>
-
-            <% else %>
-                    </div>
-                  </div>
-                </div>
-            <% end %>
-
+      <% if user_signed_in? %>
+        <%= link_to '[Supprimer]', [comment.post, comment],
+        method: :delete,
+        data: { confirm: 'Êtes-vous sûr ?' } %>
+      <% end %>
     </li>
   </ul>
-  </div>
+</div>
 <% end %>

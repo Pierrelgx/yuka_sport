@@ -1,16 +1,15 @@
 <div class="d-grid gap-2 d-sm-flex justify-content-sm-center" >
-  <div class="container d-flex mb-4 box-shadow p-5 justify-content-center" style="background-color:#d1e8ff">
-        <br>
+  <div class="container d-flex mb-4 box-shadow p-5 justify-content-center" style="background-color:#d1e8ff"><br>
     <div class="row g-3">
         <div class="text-center" >
-              <h4 class="fw-light">Recherche ta marque de sport préférée ci-dessous : </h4>
+          <h4 class="fw-light">Recherche ta marque de sport préférée ci-dessous : </h4>
         </div>
-            <%= form_tag brands_path, class: "d-flex input-group-lg", method: :get do %>
-              <%= text_field_tag :query,
-                params[:query],
-                placeholder: "Rechercher une marque", class: "px-2 me-3 form-control"  %>
-                <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control", :style => "width:170px;" %>
-              <% end %>
+          <%= form_tag brands_path, class: "d-flex input-group-lg", method: :get do %>
+            <%= text_field_tag :query,
+              params[:query],
+              placeholder: "Rechercher une marque", class: "px-2 me-3 form-control"  %>
+              <%= submit_tag "C'est parti ! ", class: "btn btn-primary form-control", :style => "width:170px;" %>
+            <% end %>
     </div>
   </div>
 </div>
