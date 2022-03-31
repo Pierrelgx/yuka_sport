@@ -13,3 +13,18 @@
  *= require_tree .
  *= require_self
  */
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&family=Open+Sans:wght@300&display=swap');
+
+ a:link {
+    text-decoration: none;
+ }
+
+ p{
+    font-family: 'Open Sans', sans-serif;
+ }
+
+ h1, h2, h3, h4, h5, h6, header, footer {
+    font-family: 'Josefin Sans', sans-serif;
+ }
+ 
