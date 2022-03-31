@@ -1,26 +1,85 @@
 <div class="container">
-<h2>Texte explicatif<h2>
-  <div class="row">
-<div class="col d-flex justify-content-center">
-  <div class="card m-2" style="width: 300px;">
-    <img class="card-img" src="https://www.peah.fr/wp-content/uploads/2016/06/nike_logo.jpg" alt="a snow-capped mountain range"/>
-      <div class="card-img-overlay text-white">
-      </div>
-  </div>
-</div>
-<div class="col d-flex justify-content-center">
-<div class="card m-2" style="width: 300px;">
-  <img class="card-img" src="https://cdn.britannica.com/94/193794-050-0FB7060D/Adidas-logo.jpg" alt="a snow-capped mountain range"/>
-    <div class="card-img-overlay text-white">
+<section class="section-3 pt-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <h3 class="fw-light mb-3">Les dernières marques publiées sur Fair Athlete : </h3>
+                <br>
+            </div>
+            <div class="col-6 d-flex justify-content-end">
+                <div class="fav px-2"><a class="btn btn-primary mb-3 mr-1" href="#carouselExampleIndicators2" role="button" data-slide="prev">
+                    <i class="fa fa-arrow-left"></i>
+                </a></div>
+               <div class="fav"> <a class="btn btn-primary mb-3 " href="#carouselExampleIndicators2" role="button" data-slide="next">
+                    <i class="fa fa-arrow-right"></i>
+                </a></div>
+            </div>
+            <div class="col-12">
+                <div id="carouselExampleIndicators2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="row">
+
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                          <%= image_tag"logo1.png", :alt => "80%x200", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 15rem; width: 22rem"%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                          <%= image_tag"logo2.png", :alt => "80%x200", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 15rem; width: 22rem"%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                          <%= image_tag"logo3.png", :alt => "80%x200", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 15rem; width: 22rem"%>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="row">
+
+                                 <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                          <%= image_tag"logo4.png", :alt => "80%x200", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 15rem; width: 22rem"%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                          <%= image_tag"logo5.png", :alt => "80%x200", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 15rem; width: 22rem"%>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4 mb-3">
+                                    <div class="card">
+                                        <div class="card-body">
+                                          <%= image_tag"logo6.png", :alt => "80%x200", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 15rem; width: 22rem"%>
+                                        </div>
+                                    </div>
+                                </div>
+                              </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+                <div class="col text-center">
+          <%= link_to brands_path do %>
+          <div class="btn btn-outline-primary" style="width:200px" >Consulter les marques</div>
+          <% end %>
+        </div>
     </div>
-  </div>
-</div>
-<div class="col d-flex justify-content-center">
-<div class="card m-2" style="width: 300px;">
-      <img class="card-img" style="max-width: 300px; max-height: 200px;" src="https://logos-world.net/wp-content/uploads/2022/01/Gymshark-Logo.png" alt="a snow-capped mountain range"/>
-    <div class="card-img-overlay text-white">
-    </div>
-  </div>
-</div>
-</div>
-</div>
+</section>
