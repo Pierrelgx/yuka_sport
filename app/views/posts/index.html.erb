@@ -1,12 +1,9 @@
-<p id="notice"><%= notice %></p>
-
-<div class = "container">
-<h1 class="fw-light">Posts</h1>
-</div>
-
-
 <div class="album py-5 bg-light ">
     <div class="container">
+        <div class = "">
+        <h1 >Posts</h1>
+        <h4 class="row align-items-center">Retrouvez tous les derniers posts</h4>
+    </div>
         <div class="row">
             <% @posts.each do |post| %>
             <div class="col-lg-4 d-flex align-items-stretch">
@@ -18,7 +15,7 @@
                     <% end %>                    
                     <div class="card-body">
                         <h3 class="display-7"><%= post.title %></h3>
-                        <p class="card-text "><%= post.description %></p>
+                        <p class="card-text "><%= truncate(post.description, length: 100) %></p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                         <a class="btn btn-primary active mt-2 mb-4" href="<%=post_path(post.id)%>">Détails</a>
@@ -28,6 +25,7 @@
         </div>
     </div>
 </div>
+
 <% end %>
 
 

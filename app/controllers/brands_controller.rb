@@ -5,6 +5,7 @@ class BrandsController < ApplicationController
   def index
     @brands = Brand.all
     @brands = search_query_selection()
+    flash[:warning] = "Salut je suis flash"
   end
 
   # GET /brands/1 or /brands/1.json
@@ -58,6 +59,8 @@ class BrandsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  
 
   private
     # Use callbacks to share common setup or constraints between actions.
