@@ -10,48 +10,43 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name %>
+<div class="row">
+  <div class="col-12">
+      <%= form.label :name, { class: "form-label"} %>
+      <%= form.text_field :name, { class: "form-control", placeholder: "Nom de la marque" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :rank %>
-    <%= form.number_field :rank %>
+  <div class="col-md-6">
+      <%= form.label :rank, { class: "form-label"} %>
+      <%= form.number_field :rank, { class: "form-control", placeholder: "Valeur comprise entre 1 et 100" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :environment %>
-    <%= form.number_field :environment %>
+  <div class="col-md-6">
+      <%= form.label :environment, { class: "form-label"} %>
+      <%= form.number_field :environment, { class: "form-control", placeholder: "Valeur comprise entre 1 et 100" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :labour %>
-    <%= form.number_field :labour %>
+  <div class="col-md-6">
+      <%= form.label :labour, { class: "form-label"}  %>
+      <%= form.number_field :labour, { class: "form-control", placeholder: "Valeur comprise entre 1 et 100" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :animal %>
-    <%= form.number_field :animal %>
+  <div class="col-md-6">
+    <%= form.label :animal, { class: "form-label"}  %>
+    <%= form.number_field :animal, { class: "form-control", placeholder: "Valeur comprise entre 1 et 100" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :quality %>
-    <%= form.number_field :quality %>
+    <div class="col-md-6">
+    <%= form.label :quality, { class: "form-label"}  %>
+    <%= form.number_field :quality, { class: "form-control", placeholder: "Valeur comprise entre 1 et 100" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price %>
+  <div class="col-md-6">
+    <%= form.label :price, { class: "form-label"}  %>
+    <%= form.number_field :price, { class: "form-control", placeholder: "Valeur comprise entre 1 et 100" } %>
   </div>
-
-  <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description %>
+  <div class="mb-3">
+    <%= form.label :description, { class: "form-label"} %>
+    <%= form.text_area :description, { class: "form-control", placeholder: "Informations concernant la marque", rows: "3" } %>
   </div>
-
-  <div class="actions">
-    <%= form.submit %>
+  <div class="col-12">
+    <button type="submit" class="btn btn-primary">Soumettre la marque</button>
   </div>
+</div>
 <% end %>
+
+
