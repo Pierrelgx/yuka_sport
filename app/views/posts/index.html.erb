@@ -10,16 +10,19 @@
         <div class="row">
             <% @posts.each do |post| %>
             <div class="col-lg-4 d-flex align-items-stretch">
-                <div class="card mb-4 box-shadow">
-                        <%= image_tag"nike#{post.id}.png", :alt => "", :class => "card-img-top", :style => "height: 100%; width: 100%; display: block;"%>
-                    <div class="card-body">
+                <div class="card mb-4 box-shadow align-items-stretch">
+                    <% if image_tag = "blog_image#{post.id}.webp" %>
+                            <%= image_tag"blog_image#{post.id}.webp", :alt => "", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 20rem; width: 25rem"%>
+                    <% else %>
+                            <%= image_tag"nike.jpg", :alt => "", :class => "card-img-top", :style => "height: 100%; width: 100%; display: block;"%>
+                    <% end %>                    <div class="card-body">
                         <h3 class="display-7"><%= post.title %></h3>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text "><%= post.description %></p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                         <a class="btn btn-primary active mt-2 mb-4" href="<%=post_path(post.id)%>">Détails</a>
                         </div>
-                        <small class="text-muted">9 mins</small>
+                        <small class="text-muted"><%= post.created_at.strftime("%d/%m/%Y") %></small>
             </div>
         </div>
     </div>
