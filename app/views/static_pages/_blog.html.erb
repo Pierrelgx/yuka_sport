@@ -1,3 +1,6 @@
+<div class="container">
+    <h2>Texte explicatif<h2>
+</div>
 <div class="album py-5 bg-light ">
     <div class="container">
         <div class="row">
@@ -10,7 +13,7 @@
                             <%= image_tag"nike.jpg", :alt => "", :class => "card-img-top", :style => "height: 100%; width: 100%; display: block;"%>
                     <% end %>                    <div class="card-body">
                         <h3 class="display-7"><%= post.title %></h3>
-                        <p class="card-text"><%= post.description %></p>
+                        <p class="card-text"><%=  truncate(post.description, length: 100) %></p>
                     <div class="d-flex justify-content-between align-items-center">
                         <div class="btn-group">
                         <a class="btn btn-primary active mt-2 mb-4" href="<%=post_path(post.id)%>">Détails</a>
