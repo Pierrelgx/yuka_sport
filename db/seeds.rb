@@ -252,6 +252,150 @@ Brand.create!(
   environment: rand(0..100)
 );
 
+Brand.create!(
+  name: "Converse",
+  description: "Depuis 2003, Converse appartient au groupe Nike. La Converse Rubber Shoe Company est créée en 1908 par Marquis Mills Converse (1861-1931), à Malden (Massachusetts) au nord de Boston. S'inspirant du nom de sa mère « Converse »2, Mills décide de fabriquer une chaussure avec une semelle antidérapante en caoutchouc permettant de ne pas glisser3. À cette époque, l'entreprise fabrique donc des bottes fourrées avec des semelles en caoutchouc4. En 1910, la Converse est la chaussure la plus vendue et coûte 5 $. Des milliers de chaussures sont ainsi produites dans les usines chaque jour. Pour se diversifier, Mills Converse choisit de se tourner vers la chaussure de sport. La Converse All Star, une chaussure de basket-ball, est créée en 1917. En 1921, la firme embauche le basketteur Américain Chuck Taylor, en tant que commercial. Ce dernier améliore le design de la chaussure de sport grâce à ses suggestions et devient un représentant emblématique de la marque jusqu'à sa retraite en 1968. (source : Wikipédia)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Yoga Searcher",
+  description: "L'histoire de Yoga Searcher commence en 2013, lorsque la professeure de yoga Bénédicte Peroz transforme une ancienne ferme landaise en haut-lieu de bien-être accueillant des retraites de yoga. Un an plus tard, la marque originaire d'Hossegor lance sa propre collection de vêtements de yoga éco-conçus. Fabriquées au Portugal dans des ateliers certifiés OEKO-TEX (un label qui garantit des textiles exempts de produits toxiques pour le corps et l'environnement), toutes les pièces sont confectionnées à partir de matières d'origine naturelle et de fibres recyclées. Des accessoires de yoga (tapis, briques, coussins, sangles...) et une ligne de produits de beauté naturels complètent l'expérience Yogi au-delà du tapis. Le plus : les jolis coloris végétaux et les motifs inspirés par la nature (source : Le journal des femmes)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Organic Basics",
+  description: "À l'origine, Organic Basics est une marque de sous-vêtements durables basée à Copenhague, créée par trois amis danois lassés de jeter et racheter sans cesse de la lingerie qui s'use trop rapidement. Après le succès de leur sous-vêtements, la marque développe désormais des tenues de sport durables, confectionnées en matières naturelles, recyclées et biodégradables. Leur texture stretch toute douce effet 'seconde peau' et leur design simple et épuré ont de quoi séduire les Yogis. Jouant le jeu de la transparence à fond, leur site internet partage les chiffres de l'impact de l'entreprise sur l'environnement et ouvre les portes de leurs usines partenaires en Europe. Dernièrement, la marque s'est même associée à l'organisation Chooose pour compenser ses émissions de carbone en finançant un parc éolien à Koru en Turquie. (source : Le journal des femmes)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Kind Yoga",
+  description: "Installé récemment dans le centre de Paris, ce nouveau studio de Yoga propose aussi une gamme de vêtements pour accompagner nos asanas avec douceur et style. Après une dizaine d'années passées dans l'industrie de la mode et de l'habillement athlétique, la fondatrice de la marque Kind Yoga, Nathalie Alsing Alauzen s'y connait un rayon en matière de vêtements sportifs. En plus d'être ultra légères et confortables, les pièces sont fabriquées consciencieusement grâce à une technologie d'impression numérique qui réduit la consommation d'eau dans la production textile. Le plus : très engagée dans l'entrepreneuriat féminin, la marque reverse une partie de ses bénéfices à des associations qui soutiennent les initiatives professionnelles des femmes précaires. (source : Le journal des femmes)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Azar",
+  description: "En iranien, Azar signifie Feu. C'est aussi le troisième prénom de la fondatrice de la marque, Victoire Flochel, jeune entrepreneuse tout juste sortie de l'Institut Français de la Mode. Durant deux ans, Victoire et des modélistes du sport et de la lingerie ont travaillé sur cette gamme de brassières et de leggings qui associent confort, éthique et esthétisme. Tous les vêtements sont fabriqués dans une petite usine au Portugal proche de Porto, où règnent la bonne humeur et le respect des employés, menée par la chef modéliste sexagénaire. Solides et techniques, les tissus provenant d'Italie sont certifiés OEKO-TEX (un label qui garantit des textiles sans produits nocifs pour le corps et l'environnement). Leur design sexy et leurs jolis coloris donnent de l'allure et des bonnes vibes pendant les cours de Yoga. Le plus : la marque reverse 15% des bénéfices de ses ventes à la Fédération Nationale des CIDFF, qui lutte contres les violences conjugales.  (source : Le journal des femmes)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "YUJ Paris",
+  description: "Précurseur à l'époque, la professeure de yoga Hélène Duval lançait la première marque française de vêtements et d'accessoires exclusivement dédiée au yoga en 2014. Depuis sa création, YUJ Paris compilait déjà des engagements éthiques et responsables bien avant l'heure : teinture à l'eau, système de production centré au Portugal pour limiter l'empreinte carbone, tissus certifiés Oeko-tex (un label qui garantit les textiles exempts de produits toxiques pour la peau et la planète), emballages réalisés à partir de plastique recyclé.... pour n'en citer que quelques-uns. Récemment, YUJ a obtenu le label Global Recycled Standard (GRS) qui certifie à la fois que les produits sont recyclés, mais également le respect des bonnes conditions environnementales et sociales de l'entreprise. Cerise sur le gâteau, le design des vêtements est tout aussi désirable : motifs colorés, mantras inspirants, tissus doux et confortables... De quoi pratiquer sa séance de yoga sereinement !(source : Le journal des femmes)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Every Second Counts",
+  description: "Nous le savons toutes, passer la porte de la salle de gym est parfois un calvaire. C’est là qu’Every Second Counts entre en jeu. Fondée par Sally Dixon, une ex journaliste mode, cette marque repose sur une expérience de 17 ans dans la mode et sur une passion dévorante pour le sport. Conçue pour fonctionner avec votre garde-robe actuelle, cette collection vous mène du yoga au spinning et jusqu’au café après l’effort. Sally Dixon a bel et bien compris que « chaque seconde compte ». Des imprimés dans des teintes noires et blanches, mixées à des coloris acidulés. De quoi créer de nombreux looks pour aller à la salle de sport. Si vous êtes passionnée de bien-être et de nourriture saine, rendez-vous sur le blog Every Second Counts. Vous y trouverez des trucs et astuces pour mieux vivre (source : Marie Claire)."
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Laain",
+  description: "Vous ne connaissez peut-être pas cette marque de vêtements de sport car Laain a été lancée en 2014. Néanmoins, elle est vite devenue l’une des marques les plus chics. Créée par la styliste Sheila McKain-Waid et la styliste Tamara Rothstein, cette marque regorge de petites mains créatives. Cette saison, la collection se compose de cropped-tops, de vestes, de leggings et de pull-over et sweats à capuche en tricot. Le tout dans des couleurs chaudes. Ajoutez à cette collection capsule une ligne de vêtements de yoga, dessinée dans des tons gris et rose avec en tête le confort et la douceur. Quelle que soit votre humeur, c’est une collection à porter. Si vous êtes sportive, vous allez l’adopter sans aucun doute. (source : Marie Claire)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Björn Borg",
+  description: "Pour copier ces filles à fond à côté de qui vous n’avez pas envie vous entrainer, voici Björn Borg. La marque propose un large choix de vêtements de sport - de l’habillement aux chaussures, en passant par les sacs, et plus récemment les sous-vêtements (ultra sexy !) - avec des motifs tribaux, dans des tons rouges orangés. Les coupes prennent en comptes la protection du corps. Tenez-vous prête à intimider le reste de votre groupe de body-combat, alors que vous vous entrainerez dans votre tenue graphique et stylée. (source : Marie Claire)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "No ka’oi",
+  description: "Dépassons les marques de sport classiques, voici la nouvelle it-collection ! Obsédante, on vous le dit. No ka’oi est une ligne de prêt-à-porter italienne, inspirée d’Hawaii. Les vêtements de sport sont vraiment devenus un must dans le royaume de la couture. Cette marque est conçue pour l’automne-hiver et le printemps-été, et elle inclut une large proposition de pièces pour toutes les activités sportives. Les collections ont été dessinées avec tant de créativité qu’elles ont l’air d’être des collections mode plutôt que des pièces sportives de prêt-à-porter - mais le tout est fabriqué avec des microfibres techniques qui allient confort et performance. (source : Marie Claire)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Whistles x Frame",
+  description: "La marque de prêt-à-porter Whistles s’est associée avec le studio de fitness londonien Frame pour créer une collection capsule de 13 pièces fabuleuses (selon nous). Cette collection active est dessinée pour emmener la femme moderne de la rue au studio, du cours au café sans effort. Les pièces sont incroyablement confortables, élastiques et conçues dans des matières qui sèchent vite afin qu’elle travaillent aussi dur que vous. Vous y trouverez des pantalons légers à la coupe loose et des combinaisons avec des cropped-tops pour vous offrir une silhouette ultra-féminine tout en vous promettant 100% de confort. (source : Marie Claire)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "We are Handsome",
+  description: "L’une de nos marques de maillots de bain préférée vient de lancer une collection de vêtements de sports ! Ses imprimés têtes de tigres multicolores font grimper We are Handsome au sommet de l’échelle de la coolitude. La marque s’apprête à lancer une deuxième collection capsule. On y trouve : des micro-brassières de sport, des cropped-tops et une sélection de leggings aux imprimés multicolores. De quoi vous faire tourner la tête. Que vous grimpiez une colline pour vos vacances ou que vous ayez le cran de les porter à votre salle de sport, votre entrainement a intérêt à être aussi félin et dynamique que votre look. (source : Marie Claire)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+Brand.create!(
+  name: "Vaara",
+  description: "Conçue par Tatiana Korsakova, qui est une mère, une femme d’affaire et une férue de sport elle-même, la marque comprend le besoin de vêtements tout-confort, qui apportent énergie et équilibre à la salle de gym. Nous adorons cette collection capsule pour ses essentiels décontracté qui allient confort et élégance. Si vous vous retrouvez souvent en tenue de sport à cuisiner le dîner pour toute la famille alors que votre séance était à 11h le matin, Vaara est votre solution pour le look d’une journée sans effort, cool et confortable. (source : Marie Claire)",
+  price: rand(0..100),
+  rank: rand(0..100),
+  quality: rand(0..100),
+  animal: rand(0..100),
+  labour: rand(0..100),
+  environment: rand(0..100)
+);
+
+
 Post.create!(
   title: "La marque Adidas est-elle souscieuse de l'environnement ?",
   description: "Adidas a éliminé certaines matières polluantes de sa production, notamment du  PVC dans toutes les catégories de produits qu’il fabrique. À présent, 99% des produits de la marque ne contiennent pas PVC. Adidas investit également dans le coton durable, en l’utilisant exclusivement et en encourageant les producteurs de ce type de coton en injectant des fonds dans le projet  'Initiative pour un Coton meilleur'. La marque sort également des produits éco-responsables, comme par exemple en 2015 avec Parley for the Oceans. Les deux marques avaient alors présenté une chaussure dotée d’une tige entièrement fabriquée grâce à des fibres et des fils issus de déchets plastiques marins recyclés. En parallèle, le groupe bavarois travaille à son programme de Green Company, où le siège et 5 sites nord-américains ont été mis aux normes de l'Iso 14001 : 'Notre stratégie en matière de développement durable est également le fondement pour une meilleure efficacité et des innovations. Cette stratégie est primordiale pour le succès', commente Herbert Hainer, le CEO."
