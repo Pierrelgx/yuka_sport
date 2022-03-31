@@ -8,7 +8,7 @@
             <div class="col-lg-4 d-flex align-items-stretch">
                 <div class="card mb-4 box-shadow align-items-stretch">
                     <% if image_tag = "blog_image#{post.id}.webp" %>
-                            <%= image_tag"blog_image#{post.id}.webp", :alt => "", :class => "card-img-top align-items-stretch", :style => "display: block; ;height: 20rem; width: 25rem"%>
+                            <%= image_tag"blog_image#{post.id}.webp", :alt => "", :class => "card-img-top align-items-stretch; position: center; background-repeat: no-repeat; background-size: cover", :style => "display: block; ;height: 20rem; width: 25rem"%>
                     <% else %>
                             <%= image_tag"nike.jpg", :alt => "", :class => "card-img-top", :style => "height: 100%; width: 100%; display: block;"%>
                     <% end %>                    <div class="card-body">
