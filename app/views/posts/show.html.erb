@@ -6,7 +6,7 @@
 <div class="container p-5 my-5 border">
   <p><%= @post.description %></p>
   <div style="display: flex; justify-content: flex-end">
-    <footer class="blockquote-footer"><p><%= @post.created_at %></p></footer>
+    <footer class="blockquote-footer"><p><%= @post.created_at.strftime("%d/%m/%Y") %></p></footer>
   </div>
 
 </div>
