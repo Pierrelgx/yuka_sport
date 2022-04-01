@@ -11,9 +11,9 @@ class Brand < ApplicationRecord
     }
     
 
-  validates :name, length: { minimum: 2 }
-  validates :name, :uniqueness => { :message => "Cette marque existe déjà"}
-  validates :rank, presence: true
+    validates :name, length: { minimum: 2, :message => "Minimum deux caractères" } 
+    validates :name, :uniqueness => { :message => "Cette marque existe déjà"}
+    validates :rank, :presence => { :message => "La mention est obligatoire"}
 
   
 
